@@ -384,6 +384,21 @@
       if (touched) { S.bundleAdded = false; renderBundle(); }
     });
 
+    /* Mobile hamburger: toggles the category menu */
+    var menuBtn = $('#menu-btn');
+    var subnav = $('#subnav');
+    function setMenu(open) {
+      subnav.classList.toggle('is-open', open);
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    }
+    menuBtn.addEventListener('click', function () {
+      setMenu(menuBtn.getAttribute('aria-expanded') !== 'true');
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && subnav.classList.contains('is-open')) { setMenu(false); menuBtn.focus(); }
+    });
+
     /* sticky buy bar after 620px */
     var bar = $('#sticky-bar');
     function onScroll() {

@@ -29,6 +29,9 @@
   <!-- 2. Header -->
   <header class="site-header">
     <div class="site-header__inner">
+      <button type="button" class="icon-btn menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="subnav">
+        <span class="menu-btn__bars" aria-hidden="true"></span>
+      </button>
       <a href="#" class="wordmark" aria-label="Peter's of Kensington home">
         <span class="wordmark__script">Peter's</span>
         <span class="wordmark__sub">OF KENSINGTON</span>
@@ -53,7 +56,7 @@
   </header>
 
   <!-- 3. Category nav + breadcrumb -->
-  <nav class="subnav" aria-label="Categories">
+  <nav class="subnav" id="subnav" aria-label="Categories">
     <div class="subnav__inner">
       <a href="#">Brands</a><a href="#">Cookware &amp; Knives</a><a href="#">Electrical</a><a href="#">Kitchen</a><a href="#">Tableware</a><a href="#">Kids</a><a href="#">Home &amp; Decor</a><a href="#">Travel &amp; Leisure</a><a href="#">Beauty &amp; Fashion</a><a href="#">Stationery</a>
     </div>
@@ -87,6 +90,8 @@
 
     <!-- Buy box -->
     <div class="pdp__buy">
+      <!-- Head: on mobile this moves above the gallery (see CSS) -->
+      <div class="buybox__head">
       <div class="share">
         <span class="share__label">Share</span>
         <a href="#" class="share__btn" aria-label="Share on Facebook">f</a>
@@ -105,6 +110,9 @@
         <span class="rating__sep" aria-hidden="true">|</span>
         <span>Product number: 267202</span>
       </div>
+      </div><!-- /.buybox__head -->
+
+      <div class="buybox__body">
 
       <div class="badges">
         <span class="tag tag--navy tag--lg">SAVE <span data-bind="savePct">45</span>%</span>
@@ -259,6 +267,7 @@
         <div class="enquire__title">Have a question about this product?</div>
         <button type="button" class="btn enquire__btn">Enquire</button>
       </div>
+      </div><!-- /.buybox__body -->
     </div>
   </section>
 

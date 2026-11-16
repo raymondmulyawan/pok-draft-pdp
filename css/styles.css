@@ -232,6 +232,20 @@ a:hover { color: var(--navy); text-decoration: underline; }
   line-height: 1.6;
 }
 .icon-btn:hover { color: #fff; text-decoration: none; }
+
+/* Hamburger: mobile only (see responsive section) */
+.menu-btn { display: none; }
+.menu-btn__bars,
+.menu-btn__bars::before,
+.menu-btn__bars::after { display: block; width: 24px; height: 2px; background: currentColor; border-radius: 2px; transition: transform .2s ease, opacity .2s ease; }
+.menu-btn__bars { position: relative; }
+.menu-btn__bars::before,
+.menu-btn__bars::after { content: ""; position: absolute; left: 0; }
+.menu-btn__bars::before { top: -7px; }
+.menu-btn__bars::after { top: 7px; }
+.menu-btn[aria-expanded="true"] .menu-btn__bars { background: transparent; }
+.menu-btn[aria-expanded="true"] .menu-btn__bars::before { transform: translateY(7px) rotate(45deg); }
+.menu-btn[aria-expanded="true"] .menu-btn__bars::after { transform: translateY(-7px) rotate(-45deg); }
 .icon-btn__glyph { position: relative; display: inline-block; }
 .cart-badge {
   position: absolute;
@@ -747,6 +761,23 @@ body.is-cart-open .drawer { transform: none; visibility: visible; transition: tr
   .reviews__card { gap: 28px; }
 }
 
+/* Mobile: category menu behind the hamburger, title above the gallery */
+@media (max-width: 768px) {
+  .menu-btn { display: inline-flex; margin-left: -10px; }
+  .subnav { display: none; padding-top: 4px; padding-bottom: 4px; border-bottom: 1px solid var(--pink-border); }
+  .subnav.is-open { display: block; }
+  .subnav__inner { flex-direction: column; flex-wrap: nowrap; gap: 0; font-size: 14px; }
+  .subnav__inner a { display: block; padding: 12px 0; border-bottom: 1px solid var(--pink-border); }
+  .subnav__inner a:last-child { border-bottom: 0; }
+
+  .pdp { flex-direction: column; flex-wrap: nowrap; align-items: stretch; gap: 0; }
+  .pdp__buy { display: contents; }
+  .buybox__head { order: 1; margin-bottom: 16px; }
+  .pdp__gallery { order: 2; margin-bottom: 24px; }
+  .buybox__body { order: 3; }
+  .pdp__gallery, .buybox__head, .buybox__body { min-width: 0; flex-basis: auto; }
+}
+
 @media (max-width: 480px) {
   .site-header { padding: 12px 16px; }
   .site-header__inner { gap: 10px 14px; }
@@ -757,7 +788,7 @@ body.is-cart-open .drawer { transform: none; visibility: visible; transition: tr
 
   .subnav, .reviews, .faq, .newsletter, .related, .site-footer, .legal { padding-left: 16px; padding-right: 16px; }
   .breadcrumb, .pdp, .collection { padding-left: 16px; padding-right: 16px; }
-  .pdp__gallery, .pdp__buy { min-width: 0; flex-basis: 100%; }
+  .pdp__gallery, .pdp__buy { min-width: 0; }
   .reviews__card { padding: 20px 16px; }
   .reviews__bars { max-width: none; }
 
