@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Emile Henry Sublime Round Casserole | Peter's of Kensington (draft PDP)</title>
+<meta name="description" content="Design prototype: Peter's of Kensington product detail page with cart drawer.">
+<!-- Design prototype: keep out of search engines -->
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;family=Parisienne&amp;display=swap">
+<link rel="stylesheet" href="css/styles.css">
+<script src="js/data.js" defer></script>
+<script src="js/cart.js" defer></script>
+<script src="js/pdp.js" defer></script>
+</head>
+<body>
+
+<div class="page" id="page">
+
+  <!-- 1. Shipping banner -->
+  <div class="top-banner">
+    <div class="top-banner__text">Now shipping to New Zealand, USA, UK, Canada, China, Hong Kong, Japan and more.</div>
+    <a href="#" class="top-banner__link">Click here for full list.</a>
+  </div>
+
+  <!-- 2. Header -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="#" class="wordmark" aria-label="Peter's of Kensington home">
+        <span class="wordmark__script">Peter's</span>
+        <span class="wordmark__sub">OF KENSINGTON</span>
+      </a>
+      <nav class="header-links" aria-label="Promotions">
+        <a href="#">Daily Deals</a><a href="#">Newsletter</a><a href="#">Gift Registry</a>
+      </nav>
+      <div class="search" role="search">
+        <input class="search__input" type="search" placeholder="Search by Brand or Keyword" aria-label="Search by brand or keyword">
+        <span class="search__sep" aria-hidden="true"></span>
+        <button class="search__btn" type="button" aria-label="Search">⌕</button>
+      </div>
+      <div class="header-tools">
+        <button class="currency" type="button" aria-label="Currency: Australian dollars"><span class="currency__flag" aria-hidden="true"></span>AUD ($) ⌄</button>
+        <a href="#" class="icon-btn" aria-label="Account"><span class="icon-btn__glyph">⚇</span></a>
+        <a href="#" class="icon-btn" aria-label="Wishlist"><span class="icon-btn__glyph">♡</span></a>
+        <button type="button" id="cart-btn" class="icon-btn cart-btn" aria-label="Open cart, 0 items" aria-haspopup="dialog">
+          <span class="icon-btn__glyph">▢<span class="cart-badge" id="cart-badge">0</span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. Category nav + breadcrumb -->
+  <nav class="subnav" aria-label="Categories">
+    <div class="subnav__inner">
+      <a href="#">Brands</a><a href="#">Cookware &amp; Knives</a><a href="#">Electrical</a><a href="#">Kitchen</a><a href="#">Tableware</a><a href="#">Kids</a><a href="#">Home &amp; Decor</a><a href="#">Travel &amp; Leisure</a><a href="#">Beauty &amp; Fashion</a><a href="#">Stationery</a>
+    </div>
+  </nav>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="#">Home</a> &gt; <a href="#">Cookware &amp; Knives</a> &gt; <a href="#">Cookware</a> &gt; <a href="#">Casserole Pots &amp; Dishes</a> &gt; <a href="#">Emile Henry</a>
+  </nav>
+
+  <main>
+
+  <!-- 4. Product area -->
+  <section class="pdp" aria-label="Product">
+
+    <!-- Gallery -->
+    <div class="pdp__gallery">
+      <div class="gallery__hero media">
+        <div class="ph" data-img="images/casserole-hero.jpg"><span class="ph__label">Sublime Round Casserole</span></div>
+        <div class="gallery__badges">
+          <span class="tag tag--sale">ON SALE</span>
+          <span class="tag tag--navy tag--live"><span class="dot dot--orange" aria-hidden="true"></span>LOW IN STOCK</span>
+        </div>
+      </div>
+      <div class="gallery__thumbs" role="group" aria-label="Product images">
+        <button type="button" class="thumb media is-active" data-thumb="0" aria-label="View image: Front" aria-pressed="true"><div class="ph" data-img="images/casserole-front.jpg"><span class="ph__label">Front</span></div></button>
+        <button type="button" class="thumb media" data-thumb="1" aria-label="View image: Interior" aria-pressed="false"><div class="ph" data-img="images/casserole-interior.jpg"><span class="ph__label">Interior</span></div></button>
+        <button type="button" class="thumb media" data-thumb="2" aria-label="View image: Lid" aria-pressed="false"><div class="ph" data-img="images/casserole-lid.jpg"><span class="ph__label">Lid</span></div></button>
+        <button type="button" class="thumb media" data-thumb="3" aria-label="View image: In use" aria-pressed="false"><div class="ph" data-img="images/casserole-in-use.jpg"><span class="ph__label">In use</span></div></button>
+      </div>
+    </div>
+
+    <!-- Buy box -->
+    <div class="pdp__buy">
+      <div class="share">
+        <span class="share__label">Share</span>
+        <a href="#" class="share__btn" aria-label="Share on Facebook">f</a>
+        <a href="#" class="share__btn" aria-label="Share on X">✕</a>
+        <a href="#" class="share__btn" aria-label="Share by email">✉</a>
+        <a href="#" class="share__btn" aria-label="Share on Pinterest">p</a>
+      </div>
+
+      <div class="buybox__brand">Emile Henry</div>
+      <h1 class="buybox__title" data-bind="title">Sublime Round Casserole Graphite 31cm/5.8l</h1>
+
+      <div class="rating">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <b>4.8</b>
+        <a href="#reviews">47 reviews</a>
+        <span class="rating__sep" aria-hidden="true">|</span>
+        <span>Product number: 267202</span>
+      </div>
+
+      <div class="badges">
+        <span class="tag tag--navy tag--lg">SAVE <span data-bind="savePct">45</span>%</span>
+        <span class="tag tag--sale tag--lg">ON SALE</span>
+        <span class="tag tag--tint tag--lg">LOWEST PRICE IN 90 DAYS</span>
+      </div>
+
+      <div class="price">
+        <span class="price__rrp">RRP $<span data-bind="rrp">649</span></span>
+        <span class="price__now">$<span data-bind="price">356</span></span>
+        <span class="price__save">You save $<span data-bind="saveAmt">293</span></span>
+      </div>
+
+      <!-- BNPL -->
+      <div class="bnpl">
+        <button type="button" class="bnpl__toggle" id="bnpl-toggle" aria-expanded="false" aria-controls="bnpl-panel">
+          <span class="bnpl__text">or 4 interest-free payments of <b data-bind="instalment">$89.00</b></span>
+          <span class="bnpl__chips">
+            <span class="chip chip--klarna">Klarna.</span>
+            <span class="chip chip--afterpay">afterpay</span>
+            <span class="chip chip--zip">zip</span>
+            <span class="chip chip--paypal"><span class="pp-blue">Pay</span><span class="pp-light">Pal</span></span>
+            <span class="bnpl__label" data-bind="payLabel">Compare ▾</span>
+          </span>
+        </button>
+        <div class="bnpl__panel" id="bnpl-panel" hidden>
+          <div class="bnpl__cell">
+            <span class="chip chip--lg chip--klarna">Klarna.</span>
+            <span class="bnpl__main">4 payments of <b data-bind="instalment">$89.00</b></span>
+            <span class="bnpl__sub">Excluding postage</span>
+            <a href="#" class="bnpl__link">More info</a>
+          </div>
+          <div class="bnpl__cell">
+            <span class="chip chip--lg chip--afterpay">afterpay</span>
+            <span class="bnpl__main">4 payments of <b data-bind="instalment">$89.00</b></span>
+            <span class="bnpl__sub">Excluding postage</span>
+            <a href="#" class="bnpl__link">More info</a>
+          </div>
+          <div class="bnpl__cell">
+            <span class="chip chip--lg chip--zip">zip</span>
+            <span class="bnpl__main"><b>Pay nothing today</b></span>
+            <span class="bnpl__sub">Buy now, pay later</span>
+            <a href="#" class="bnpl__link">More info</a>
+          </div>
+          <div class="bnpl__cell">
+            <span class="chip chip--lg chip--paypal"><span class="pp-blue">Pay</span><span class="pp-light">Pal</span></span>
+            <span class="bnpl__main">Pay in 4 of <b data-bind="instalment">$89.00</b></span>
+            <span class="bnpl__sub">Interest-free</span>
+            <a href="#" class="bnpl__link">Learn more</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stock + urgency -->
+      <div class="stock">
+        <div class="stock__title"><span class="dot dot--sale" aria-hidden="true"></span><span>Only <span data-bind="stock">3</span> left in stock</span></div>
+        <div class="stock__bar"><div class="stock__fill" id="stock-fill"></div></div>
+        <div class="stock__meta"><span data-bind="soldCopy">12 sold in the last 24 hours</span> · <b><span data-bind="viewers">18</span> people</b> are viewing this right now</div>
+      </div>
+
+      <div class="avail"><span class="dot dot--green" aria-hidden="true"></span><b>In stock</b><span>| Ships in 1–2 business days</span></div>
+      <div class="dispatch">Order in the next <b data-bind="countdown">04h 12m 00s</b> for dispatch today · Free delivery over $99</div>
+
+      <!-- Options -->
+      <div class="field-label" id="colour-label">Colour - <span data-bind="colourName">Graphite</span></div>
+      <div class="swatches" id="swatches" role="radiogroup" aria-labelledby="colour-label"></div>
+
+      <label class="field-label" for="size-select">Size</label>
+      <select class="select" id="size-select"></select>
+
+      <div class="field-label" id="qty-label">Quantity</div>
+      <div class="buy-row">
+        <div class="qty" role="group" aria-labelledby="qty-label">
+          <button type="button" class="qty__btn" id="qty-dec" aria-label="Decrease quantity">-</button>
+          <span class="qty__value" id="qty-value" aria-live="polite" data-bind="qty">1</span>
+          <button type="button" class="qty__btn" id="qty-inc" aria-label="Increase quantity">+</button>
+        </div>
+        <button type="button" class="btn add-btn" data-add="main" data-bind="cartLabel">+ Add to cart</button>
+      </div>
+      <div class="buy-extras">
+        <button type="button" class="wish">♡ Add to wishlist ⌄</button>
+        <span class="secure">🔒 Secure checkout · 30-day returns</span>
+      </div>
+
+      <!-- Trust strip -->
+      <div class="trust">
+        <div class="trust__item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E6288E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.3-2.9 7.6-7 9.5-4.1-1.9-7-5.2-7-9.5V6l7-3z"></path><path d="M9 12l2.2 2.2L15.5 10"></path></svg>
+          <div><div class="trust__title">10-year guarantee</div><div class="trust__sub">Direct from Emile Henry</div></div>
+        </div>
+        <div class="trust__item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E6288E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 3.5c1.6 0 2.6 1 3 2.4.4-1.4 1.4-2.4 3-2.4"></path><path d="M5 9h14l-1.2 10.2a1.6 1.6 0 0 1-1.6 1.4H7.8a1.6 1.6 0 0 1-1.6-1.4L5 9z"></path><path d="M9.5 12.5v4.5M14.5 12.5v4.5"></path></svg>
+          <div><div class="trust__title">Handcrafted in France</div><div class="trust__sub">Burgundy since 1850</div></div>
+        </div>
+        <div class="trust__item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E6288E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 8.5h17v4h-17z"></path><path d="M5 12.5v8h14v-8"></path><path d="M12 8.5v12"></path><path d="M12 8.5S10.8 4 8.4 4a2.2 2.2 0 0 0 0 4.5M12 8.5S13.2 4 15.6 4a2.2 2.2 0 0 1 0 4.5"></path></svg>
+          <div><div class="trust__title">Free gift wrapping</div><div class="trust__sub">Add a note at checkout</div></div>
+        </div>
+      </div>
+
+      <!-- Frequently bought together -->
+      <section class="bundle" aria-labelledby="bundle-title">
+        <div class="bundle__head">
+          <h2 class="bundle__title" id="bundle-title">Frequently bought together</h2>
+          <span class="bundle__max" data-bind="bundleMaxSave">Save $32 on the extras</span>
+        </div>
+        <div class="bundle__list" id="bundle-list"></div>
+        <div class="bundle__foot">
+          <button type="button" class="bundle__all" id="bundle-all" data-bind="selectAll">Clear all extras</button>
+          <div class="bundle__line">
+            <span class="bundle__count" data-bind="bundleCount">2 extras selected</span>
+            <span class="bundle__rrp" data-bind="bundleRrp"></span>
+          </div>
+          <div class="bundle__line bundle__line--total">
+            <span class="bundle__total-label">Bundle total</span>
+            <span class="bundle__total"><span class="bundle__total-price" data-bind="bundleTotal">$410</span><span class="bundle__total-save" data-bind="bundleSaved"></span></span>
+          </div>
+          <button type="button" class="btn bundle__cta" data-add="bundle" data-bind="bundleCta">Add 3 items to cart</button>
+          <p class="bundle__note">Ships together in one delivery · Remove anything at checkout</p>
+        </div>
+      </section>
+
+      <!-- Description -->
+      <p class="pdp-p pdp-p--first">Founded in Burgundy – the food and wine heartland of France, in 1850 - the family-run cookware brand of Emile Henry, is always designing new pieces that are useful, beautiful and durable.</p>
+      <p class="pdp-p">Discover the Sublime collection, which is crafted with new, versatile ceramic technology. It withstands the high heat of searing, frying or barbecuing, but also allows for gentle cooking at low temperatures, so the sugars in a caramel sauce or custard are gently heated without burning or overcooking. It renders every meal – sublime.</p>
+
+      <p class="pdp-h">Features:</p>
+      <ul class="features">
+        <li>Handcrafted in France</li>
+        <li>Crafted in 100% natural ceramic</li>
+        <li>Ceramic lead cadmium and nickel free</li>
+        <li>Distributes heat smoothly throughout the pan</li>
+        <li>50% lighter than most other Dutch ovens</li>
+        <li>Suitable for gas, ceramic, halogen &amp; electric hobs</li>
+        <li>Maximum temperature 290 °C with a minimum of -20°C</li>
+        <li>Microwave and dishwasher safe</li>
+        <li>10-year guarantee</li>
+        <li>Presented in Emile Henry packaging</li>
+      </ul>
+
+      <div class="specs">
+        <div>Design: <span data-bind="colourName">Graphite</span></div>
+        <div>Size: <span data-bind="sizeShort">31cm/5.8l</span></div>
+        <div>Capacity: <span data-bind="capacity">5.8L</span></div>
+      </div>
+
+      <p class="pdp-p pdp-p--tight">Please ensure you read the care and use instructions that come with the product prior to using it.</p>
+
+      <div class="acc" id="accordion"></div>
+
+      <div class="enquire">
+        <div class="enquire__title">Have a question about this product?</div>
+        <button type="button" class="btn enquire__btn">Enquire</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Reviews -->
+  <section class="reviews" id="reviews" aria-labelledby="reviews-title">
+    <div class="container">
+      <h2 class="section-title section-title--lg" id="reviews-title">Customer reviews</h2>
+      <div class="reviews__card">
+        <div class="reviews__summary">
+          <div class="reviews__score">4.8</div>
+          <div class="reviews__stars" aria-hidden="true">★★★★★</div>
+          <div class="reviews__count">47 verified reviews</div>
+          <div class="reviews__again">96% would buy again</div>
+          <button type="button" class="reviews__write">Write a review</button>
+        </div>
+        <div class="reviews__bars">
+          <div class="bars">
+            <div class="bar-row"><span class="bar-row__label">5 ★</span><span class="bar-row__track"><span class="bar-row__fill" style="width:81%"></span></span><span class="bar-row__n">38</span></div>
+            <div class="bar-row"><span class="bar-row__label">4 ★</span><span class="bar-row__track"><span class="bar-row__fill" style="width:13%"></span></span><span class="bar-row__n">6</span></div>
+            <div class="bar-row"><span class="bar-row__label">3 ★</span><span class="bar-row__track"><span class="bar-row__fill" style="width:4%"></span></span><span class="bar-row__n">2</span></div>
+            <div class="bar-row"><span class="bar-row__label">2 ★</span><span class="bar-row__track"><span class="bar-row__fill" style="width:2%"></span></span><span class="bar-row__n">1</span></div>
+            <div class="bar-row"><span class="bar-row__label">1 ★</span><span class="bar-row__track"></span><span class="bar-row__n">0</span></div>
+          </div>
+          <div class="pills">
+            <span class="pill">Even heat (14)</span>
+            <span class="pill">Lightweight (11)</span>
+            <span class="pill">Easy to clean (9)</span>
+          </div>
+        </div>
+        <div class="reviews__list">
+          <article class="review">
+            <div class="review__head"><span class="review__stars" aria-label="5 out of 5 stars">★★★★★</span><span class="review__date">12 August 2026</span></div>
+            <div class="review__title">Replaced my cast iron and I don't miss it</div>
+            <p class="review__body">Half the weight of my old Dutch oven and the lamb shanks came out perfect. Straight from the oven to the table and it still looks smart.</p>
+            <div class="review__by">Rachel M. · <span class="review__verified">✓ Verified purchase</span></div>
+          </article>
+          <article class="review">
+            <div class="review__head"><span class="review__stars" aria-label="5 out of 5 stars">★★★★★</span><span class="review__date">29 July 2026</span></div>
+            <div class="review__title">Beautiful piece, check your cooktop first</div>
+            <p class="review__body">Cooks beautifully on gas. Worth noting it won't sit on induction without a disc — the care section here saved me returning it.</p>
+            <div class="review__by">David T. · <span class="review__verified">✓ Verified purchase</span></div>
+          </article>
+          <article class="review">
+            <div class="review__head"><span class="review__stars" aria-label="4 out of 5 stars">★★★★☆</span><span class="review__date">3 July 2026</span></div>
+            <div class="review__title">Great size for a family of five</div>
+            <p class="review__body">5.8L handles a whole chicken with vegetables around it. The lid is a little heavy but that's what keeps the moisture in.</p>
+            <div class="review__by">Priya S. · <span class="review__verified">✓ Verified purchase</span></div>
+          </article>
+          <a href="#" class="reviews__all">See all 47 reviews</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Complete your collection -->
+  <section class="collection" id="collection" aria-labelledby="collection-title">
+    <h2 class="section-title section-title--lg section-title--tight" id="collection-title">Complete your collection</h2>
+    <p class="section-lead">The casserole is the centrepiece. Add the supporting cast for roasts, bakes and the table.</p>
+    <div class="card-grid" id="collection-grid"></div>
+  </section>
+
+  <!-- 7. FAQ -->
+  <section class="faq" id="faq" aria-labelledby="faq-title">
+    <div class="faq__inner">
+      <h2 class="section-title section-title--md" id="faq-title">Frequently asked questions</h2>
+      <div class="faq__list" id="faq-list"></div>
+      <div class="faq__more">Still deciding? <a href="#">Ask our cookware team</a> — we reply within one business day.</div>
+    </div>
+  </section>
+
+  <!-- 8. You may also like -->
+  <section class="related" aria-labelledby="related-title">
+    <div class="container">
+      <h2 class="section-title section-title--md" id="related-title">You may also like</h2>
+      <div class="product-grid">
+        <div class="pcard">
+          <div class="pcard__media media"><div class="ph" data-img="images/related-1.jpg"><span class="ph__label">Product</span></div><span class="pcard__sale">SALE</span></div>
+          <div class="pcard__body"><div class="pcard__brand">EMILE HENRY</div><div class="pcard__name">Sublime Round Casserole Indigo 31cm/5.8l</div><div><span class="pcard__rrp">$649</span> <span class="pcard__now">$356</span></div></div>
+        </div>
+        <div class="pcard">
+          <div class="pcard__media media"><div class="ph" data-img="images/related-2.jpg"><span class="ph__label">Product</span></div><span class="pcard__sale">SALE</span></div>
+          <div class="pcard__body"><div class="pcard__brand">EMILE HENRY</div><div class="pcard__name">Sublime Rectangular Dish Sky 35cm</div><div><span class="pcard__rrp">$299</span> <span class="pcard__now">$179</span></div></div>
+        </div>
+        <div class="pcard">
+          <div class="pcard__media media"><div class="ph" data-img="images/related-3.jpg"><span class="ph__label">Product</span></div></div>
+          <div class="pcard__body"><div class="pcard__brand">CHASSEUR</div><div class="pcard__name">Low Round Casserole Dish Duck Egg Blue 30cm</div><div><span class="pcard__rrp">$779</span> <span class="pcard__now">$319</span></div></div>
+        </div>
+        <div class="pcard">
+          <div class="pcard__media media"><div class="ph" data-img="images/related-4.jpg"><span class="ph__label">Product</span></div></div>
+          <div class="pcard__body"><div class="pcard__brand">EMILE HENRY</div><div class="pcard__name">Marble Trivet Round 21cm</div><div><span class="pcard__now">$49</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- 9. Newsletter, footer, legal -->
+  <section class="newsletter" aria-labelledby="newsletter-title">
+    <h2 class="newsletter__title" id="newsletter-title">Get Exclusive Offers &amp; Updates</h2>
+    <div class="newsletter__form">
+      <input class="newsletter__input" type="email" placeholder="Enter your email" aria-label="Email address">
+      <button type="button" class="newsletter__btn">Sign up</button>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div>
+        <div class="footer__h">Email</div><a href="#">enquiries@pok.com.au</a>
+        <div class="footer__h footer__h--spaced">Phone</div><div class="footer__muted">Sales &amp; Enquiries (02) 9662 1099</div>
+      </div>
+      <div><div class="footer__h">Peter's of Kensington</div><div class="footer__links"><a href="#">Gift Cards</a><a href="#">Daily Deals</a><a href="#">Our Story</a><a href="#">FAQs</a><a href="#">Contact Us</a></div></div>
+      <div><div class="footer__h">Shipping &amp; Returns</div><div class="footer__links"><a href="#">Postage Rates</a><a href="#">Order Tracking</a><a href="#">Return Policy</a><a href="#">Click &amp; Collect</a></div></div>
+      <div><div class="footer__h">Store Locations</div><div class="footer__links"><a href="#">Kensington Store</a><a href="#">Birkenhead Point Store</a></div></div>
+    </div>
+  </footer>
+  <div class="legal">
+    <span>Peter's of Kensington is a secure website using SSL encryption for all transactions.</span>
+    <span class="legal__copy">© 2026 - Peter's of Kensington</span>
+  </div>
+
+  <!-- 10. Sticky buy bar -->
+  <div class="sticky-bar" id="sticky-bar" hidden>
+    <div class="sticky-bar__inner">
+      <div class="sticky-bar__thumb media"><div class="ph ph--xs" data-img="images/casserole-hero.jpg"><span class="ph__label">Casserole</span></div></div>
+      <div class="sticky-bar__info">
+        <div class="sticky-bar__name" data-bind="title">Sublime Round Casserole Graphite 31cm/5.8l</div>
+        <div class="sticky-bar__alert">Only <span data-bind="stock">3</span> left · <span data-bind="countdown">04h 12m 00s</span> to dispatch today</div>
+      </div>
+      <div class="sticky-bar__price"><span class="sticky-bar__rrp">$<span data-bind="rrp">649</span></span><span class="sticky-bar__now">$<span data-bind="price">356</span></span></div>
+      <button type="button" class="btn sticky-bar__add" data-add="sticky" data-bind="cartLabel">+ Add to cart</button>
+    </div>
+  </div>
+
+</div><!-- /.page -->
+
+<!-- Cart drawer (option 2a). Rendered and driven by js/cart.js -->
+<div class="drawer-overlay" id="drawer-overlay"></div>
+<aside class="drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" aria-hidden="true" tabindex="-1">
+  <div class="drawer__head">
+    <h2 class="drawer__title" id="drawer-title">Your Cart (<span id="drawer-count">0</span>)</h2>
+    <button type="button" class="drawer__close" id="drawer-close" aria-label="Close cart">✕</button>
+  </div>
+  <div class="drawer__body" id="drawer-body">
+    <div class="drawer__lines" id="drawer-lines"></div>
+    <div class="drawer__empty" id="drawer-empty" hidden>
+      <div class="drawer__empty-title">Your cart is empty</div>
+      <p class="drawer__empty-copy">Add something below, or close this and keep browsing.</p>
+    </div>
+    <section class="rail" aria-labelledby="rail-title">
+      <div class="rail__head"><h3 class="rail__title" id="rail-title">Pairs well with your casserole</h3><span class="rail__hint" aria-hidden="true">Swipe →</span></div>
+      <div class="rail__scroller hs" id="rail-scroller"></div>
+    </section>
+  </div>
+  <div class="drawer__foot">
+    <div class="drawer__subtotal"><span class="drawer__subtotal-label">Subtotal:</span><span class="drawer__subtotal-value"><span id="drawer-subtotal">$0</span> AUD</span></div>
+    <button type="button" class="btn drawer__checkout" id="checkout-btn">Checkout now</button>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</aside>
+
+</body>
+</html>

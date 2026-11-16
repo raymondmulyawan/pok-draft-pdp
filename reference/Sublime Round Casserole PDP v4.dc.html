@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;family=Parisienne&amp;display=swap">
+<script src="./image-slot.js"></script>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #fff; font-family: Poppins, system-ui, sans-serif; color: #1A1A1A; -webkit-font-smoothing: antialiased; }
+  a { color: #E6288E; text-decoration: none; }
+  a:hover { color: #0B1F44; text-decoration: underline; }
+  table { border-collapse: collapse; }
+  select, button, input { font-family: inherit; }
+  @keyframes popIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  @keyframes pulseDot { 0%, 100% { opacity: 1; } 50% { opacity: .3; } }
+</style>
+</helmet>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240"><rect width="240" height="240" fill="#E6288E"></rect><rect x="72" y="72" width="96" height="96" rx="8" fill="#FDF0F5"></rect><text x="120" y="136" text-anchor="middle" font-family="Poppins,sans-serif" font-size="44" font-weight="700" fill="#0B1F44">PoK</text></svg></template>
+
+<div style="font-family:Poppins,sans-serif;color:#1A1A1A;font-size:15px;line-height:1.6;padding-bottom:92px">
+
+  <div style="background:#0B1F44;color:#fff;text-align:center;padding:9px 24px 8px">
+    <div style="font-size:clamp(14px,1.5vw,19px);font-weight:600;letter-spacing:-.01em">Now shipping to New Zealand, USA, UK, Canada, China, Hong Kong, Japan and more.</div>
+    <a href="#" style="font-size:12px;font-weight:600;color:#F06FAE">Click here for full list.</a>
+  </div>
+
+  <div style="background:#E06C9F;background:linear-gradient(#E36CA4,#DF5F9C);padding:14px 24px">
+    <div style="max-width:1560px;margin:0 auto;display:flex;align-items:center;gap:clamp(14px,2vw,34px);flex-wrap:wrap">
+      <div style="color:#fff;line-height:1">
+        <div style="font-family:Parisienne,cursive;font-size:32px;letter-spacing:-.01em">Peter's</div>
+        <div style="font-size:9.5px;font-weight:600;letter-spacing:.18em;margin-top:2px">OF KENSINGTON</div>
+      </div>
+      <div style="display:flex;gap:clamp(12px,1.6vw,26px);color:#fff;font-size:13px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;flex-wrap:wrap">
+        <a href="#" style="color:#fff">Daily Deals</a><a href="#" style="color:#fff">Newsletter</a><a href="#" style="color:#fff">Gift Registry</a>
+      </div>
+      <div style="flex:1 1 300px;min-width:220px;display:flex;background:#fff;align-items:center">
+        <input placeholder="Search by Brand or Keyword" style="flex:1;min-width:0;border:0;outline:none;padding:11px 16px;font-size:15px;color:#1A1A1A;background:transparent">
+        <span style="width:1px;height:22px;background:#1A1A1A"></span>
+        <span style="padding:0 14px;font-size:17px;color:#1A1A1A">⌕</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:clamp(12px,1.4vw,22px)">
+        <span style="background:#fff;color:#1A1A1A;font-size:13px;font-weight:600;padding:7px 12px;display:inline-flex;align-items:center;gap:7px;white-space:nowrap"><span style="width:18px;height:12px;background:#0B1F44;display:inline-block"></span>AUD ($) ⌄</span>
+        <span style="color:#fff;font-size:19px">⚇</span>
+        <span style="color:#fff;font-size:19px">♡</span>
+        <span style="position:relative;color:#fff;font-size:19px">▢<span style="position:absolute;top:-6px;right:-9px;background:#0B1F44;color:#fff;border-radius:999px;font-size:10px;min-width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;font-weight:600">0</span></span>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#FDF0F5;padding:13px 24px">
+    <div style="max-width:1560px;margin:0 auto;display:flex;gap:clamp(10px,1.5vw,26px);justify-content:center;flex-wrap:wrap;font-size:12.5px;font-weight:700;letter-spacing:.03em;text-transform:uppercase">
+      <a href="#" style="color:#0B1F44">Brands</a><a href="#" style="color:#0B1F44">Cookware &amp; Knives</a><a href="#" style="color:#0B1F44">Electrical</a><a href="#" style="color:#0B1F44">Kitchen</a><a href="#" style="color:#0B1F44">Tableware</a><a href="#" style="color:#0B1F44">Kids</a><a href="#" style="color:#0B1F44">Home &amp; Decor</a><a href="#" style="color:#0B1F44">Travel &amp; Leisure</a><a href="#" style="color:#0B1F44">Beauty &amp; Fashion</a><a href="#" style="color:#0B1F44">Stationery</a><a href="#" style="color:#0B1F44"><br></a>
+    </div>
+  </div>
+
+  <div style="max-width:1360px;margin:0 auto;padding:18px 24px 0;font-size:13px;color:#6E7385">
+    <a href="#" style="color:#6E7385">Home</a> &gt; <a href="#" style="color:#6E7385">Cookware &amp; Knives</a> &gt; <a href="#" style="color:#6E7385">Cookware</a> &gt; <a href="#" style="color:#6E7385">Casserole Pots &amp; Dishes</a> &gt; <a href="#" style="color:#6E7385">Emile Henry</a>
+  </div>
+
+  <div style="max-width:1360px;margin:0 auto;padding:8px 24px 48px;display:flex;gap:48px;flex-wrap:wrap;align-items:flex-start">
+
+    <div style="flex:1 1 460px;min-width:300px">
+      <div style="position:relative;aspect-ratio:1/1;width:100%">
+        <image-slot id="v2-hero" shape="rect" fit="contain" placeholder="Main product image — Sublime Round Casserole Graphite 31cm"></image-slot>
+        <div style="position:absolute;top:0;left:0;display:flex;gap:6px;flex-wrap:wrap;pointer-events:none">
+          <span style="background:#E01B22;color:#fff;font-size:11px;font-weight:600;letter-spacing:.06em;padding:5px 10px">ON SALE</span>
+          <span style="background:#0B1F44;color:#fff;font-size:11px;font-weight:600;letter-spacing:.06em;padding:5px 10px;display:inline-flex;align-items:center;gap:6px"><span style="width:6px;height:6px;border-radius:999px;background:#FF8A3D;display:inline-block;animation:pulseDot 1.4s ease-in-out infinite"></span>LOW IN STOCK</span>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:16px;max-width:520px">
+        <div style="aspect-ratio:1/1;min-width:0;overflow:hidden;border-bottom:2px solid #E6288E"><image-slot id="v2-t1" shape="rect" fit="contain" placeholder="Front"></image-slot></div>
+        <div style="aspect-ratio:1/1;min-width:0;overflow:hidden"><image-slot id="v2-t2" shape="rect" fit="contain" placeholder="Interior"></image-slot></div>
+        <div style="aspect-ratio:1/1;min-width:0;overflow:hidden"><image-slot id="v2-t3" shape="rect" fit="contain" placeholder="Lid"></image-slot></div>
+        <div style="aspect-ratio:1/1;min-width:0;overflow:hidden"><image-slot id="v2-t4" shape="rect" fit="contain" placeholder="In use"></image-slot></div>
+      </div>
+    </div>
+
+    <div style="flex:1 1 420px;min-width:310px">
+      <div style="display:flex;justify-content:flex-end;gap:10px;align-items:center;font-size:12.5px;color:#6E7385;margin-bottom:12px">
+        <span style="color:#E6288E;text-decoration:underline">Share</span>
+        <span style="width:26px;height:26px;border-radius:999px;background:#E6A9C6;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:12px">f</span>
+        <span style="width:26px;height:26px;border-radius:999px;background:#E6A9C6;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:12px">✕</span>
+        <span style="width:26px;height:26px;border-radius:999px;background:#E6A9C6;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:12px">✉</span>
+        <span style="width:26px;height:26px;border-radius:999px;background:#E6A9C6;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:12px">p</span>
+      </div>
+
+      <div style="font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#0B1F44">Emile Henry</div>
+      <h1 style="font-size:clamp(23px,2.2vw,28px);line-height:1.25;font-weight:600;color:#0B1F44;margin:6px 0 8px;text-wrap:pretty">Sublime Round Casserole {{ colorName }} {{ sizeShort }}</h1>
+
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:13px;color:#6E7385;margin-bottom:10px">
+        <span style="color:#1F9E6E;letter-spacing:2px;font-size:14px">★★★★★</span>
+        <b style="color:#0B1F44;font-weight:600">4.8</b>
+        <a href="#reviews">47 reviews</a>
+        <span style="color:#C9CCD4">|</span>
+        <span>Product number: 267202</span>
+      </div>
+
+      <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap">
+        <span style="background:#0B1F44;color:#fff;font-size:11.5px;font-weight:600;letter-spacing:.06em;padding:5px 10px">SAVE {{ savePct }}%</span>
+        <span style="background:#E01B22;color:#fff;font-size:11.5px;font-weight:600;letter-spacing:.06em;padding:5px 10px">ON SALE</span>
+        <span style="background:#FCE9F1;color:#0B1F44;font-size:11.5px;font-weight:600;letter-spacing:.06em;padding:5px 10px">LOWEST PRICE IN 90 DAYS</span>
+      </div>
+
+      <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap">
+        <span style="font-size:14.5px;color:#6E7385;text-decoration:line-through">RRP ${{ rrp }}</span>
+        <span style="font-size:32px;font-weight:700;color:#E6288E;letter-spacing:-.02em">${{ price }}</span>
+        <span style="font-size:13.5px;color:#1F9E6E;font-weight:600">You save ${{ saveAmt }}</span>
+      </div>
+
+      <div style="margin-top:12px;border:1px solid #E4E4E8;background:#fff">
+        <button onClick="{{ togglePay }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:10px 14px;flex-wrap:wrap;background:none;border:0;padding:11px 14px;cursor:pointer;text-align:left;font-family:inherit;min-height:44px">
+          <span style="font-size:13.5px;color:#0B1F44;line-height:1.4">or 4 interest-free payments of <b style="font-weight:700">{{ instalmentStr }}</b></span>
+          <span style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+            <span style="height:22px;display:flex;align-items:center;padding:0 7px;background:#FFB3C7;border-radius:4px;font-size:11.5px;font-weight:800;color:#0A0B09;letter-spacing:-.01em">Klarna.</span>
+            <span style="height:22px;display:flex;align-items:center;padding:0 9px;background:#B2FCE4;border-radius:999px;font-size:11.5px;font-weight:700;color:#000;letter-spacing:-.02em">afterpay</span>
+            <span style="height:22px;display:flex;align-items:center;padding:0 8px;background:#AA8FFF;border-radius:4px;font-size:12px;font-weight:800;color:#1A0826;letter-spacing:.02em">zip</span>
+            <span style="height:22px;display:flex;align-items:center;padding:0 7px;background:#fff;border:1px solid #DCDDE3;border-radius:4px;font-size:11.5px;font-weight:800;font-style:italic"><span style="color:#003087">Pay</span><span style="color:#009CDE">Pal</span></span>
+            <span style="font-size:12px;color:#C8137A;font-weight:600;margin-left:4px;white-space:nowrap">{{ payToggleLabel }}</span>
+          </span>
+        </button>
+        <sc-if value="{{ payOpen }}" hint-placeholder-val="{{ false }}">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(140px,100%),1fr));gap:1px;background:#EDEEF1;border-top:1px solid #EDEEF1">
+            <div style="background:#fff;padding:14px;display:flex;flex-direction:column;gap:6px;align-items:flex-start">
+              <span style="height:24px;display:flex;align-items:center;padding:0 8px;background:#FFB3C7;border-radius:4px;font-size:12.5px;font-weight:800;color:#0A0B09">Klarna.</span>
+              <span style="font-size:13px;color:#0B1F44;line-height:1.4">4 payments of <b>{{ instalmentStr }}</b></span>
+              <span style="font-size:11.5px;color:#6E7385">Excluding postage</span>
+              <a href="#" style="font-size:12px;color:#0B1F44;text-decoration:underline">More info</a>
+            </div>
+            <div style="background:#fff;padding:14px;display:flex;flex-direction:column;gap:6px;align-items:flex-start">
+              <span style="height:24px;display:flex;align-items:center;padding:0 10px;background:#B2FCE4;border-radius:999px;font-size:12.5px;font-weight:700;color:#000">afterpay</span>
+              <span style="font-size:13px;color:#0B1F44;line-height:1.4">4 payments of <b>{{ instalmentStr }}</b></span>
+              <span style="font-size:11.5px;color:#6E7385">Excluding postage</span>
+              <a href="#" style="font-size:12px;color:#0B1F44;text-decoration:underline">More info</a>
+            </div>
+            <div style="background:#fff;padding:14px;display:flex;flex-direction:column;gap:6px;align-items:flex-start">
+              <span style="height:24px;display:flex;align-items:center;padding:0 9px;background:#AA8FFF;border-radius:4px;font-size:13px;font-weight:800;color:#1A0826">zip</span>
+              <span style="font-size:13px;color:#0B1F44;line-height:1.4"><b>Pay nothing today</b></span>
+              <span style="font-size:11.5px;color:#6E7385">Buy now, pay later</span>
+              <a href="#" style="font-size:12px;color:#0B1F44;text-decoration:underline">More info</a>
+            </div>
+            <div style="background:#fff;padding:14px;display:flex;flex-direction:column;gap:6px;align-items:flex-start">
+              <span style="height:24px;display:flex;align-items:center;padding:0 8px;border:1px solid #DCDDE3;border-radius:4px;font-size:12.5px;font-weight:800;font-style:italic"><span style="color:#003087">Pay</span><span style="color:#009CDE">Pal</span></span>
+              <span style="font-size:13px;color:#0B1F44;line-height:1.4">Pay in 4 of <b>{{ instalmentStr }}</b></span>
+              <span style="font-size:11.5px;color:#6E7385">Interest-free</span>
+              <a href="#" style="font-size:12px;color:#0B1F44;text-decoration:underline">Learn more</a>
+            </div>
+          </div>
+        </sc-if>
+      </div>
+
+      <div style="margin:14px 0 18px;border:1px solid #F3C7DC;background:#FFF8FB;padding:14px 16px">
+        <div style="display:flex;align-items:center;gap:9px;font-size:13.5px;font-weight:600;color:#C8137A">
+          <span style="width:8px;height:8px;border-radius:999px;background:#E01B22;display:inline-block;animation:pulseDot 1.4s ease-in-out infinite"></span>
+          Only {{ stock }} left in stock
+        </div>
+        <div style="height:6px;background:#F3DCE7;margin:9px 0 8px"><div style="height:6px;background:#E6288E;width:{{ stockPct }}"></div></div>
+        <div style="font-size:12.5px;color:#6E7385;line-height:1.5">{{ soldCopy }} · <b style="color:#0B1F44;font-weight:600">{{ viewers }} people</b> are viewing this right now</div>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:8px;font-size:13.5px;margin-bottom:6px">
+        <span style="width:8px;height:8px;border-radius:999px;background:#1F9E6E;display:inline-block"></span>
+        <b style="font-weight:600;color:#0B1F44">In stock</b><span style="color:#6E7385">| Ships in 1–2 business days</span>
+      </div>
+      <div style="font-size:13.5px;color:#6E7385;margin-bottom:20px">Order in the next <b style="color:#E6288E;font-weight:600">{{ countdown }}</b> for dispatch today · Free delivery over $99</div>
+
+      <div style="font-size:13.5px;color:#0B1F44;margin-bottom:9px">Colour - {{ colorName }}</div>
+      <div style="display:flex;gap:12px;margin-bottom:20px">
+        <sc-for list="{{ swatches }}" as="sw" hint-placeholder-count="4">
+          <button onClick="{{ sw.onSelect }}" aria-label="{{ sw.name }}" style="position:relative;width:38px;height:38px;border-radius:999px;border:1px solid #D8DAE0;background:#fff;padding:3px;cursor:pointer">
+            <span style="display:block;width:100%;height:100%;border-radius:999px;background:{{ sw.hex }}"></span>
+            <sc-if value="{{ sw.selected }}" hint-placeholder-val="{{ false }}">
+              <span style="position:absolute;inset:-4px;border:2px solid #0B1F44;border-radius:999px"></span>
+            </sc-if>
+          </button>
+        </sc-for>
+      </div>
+
+      <div style="font-size:13.5px;color:#0B1F44;margin-bottom:9px">Size</div>
+      <select onChange="{{ onSize }}" value="{{ sizeValue }}" style="width:100%;border:1px solid #D8DAE0;padding:12px 14px;font-size:14px;color:#0B1F44;background:#fff;margin-bottom:20px;border-radius:0">
+        <sc-for list="{{ sizeOpts }}" as="sz" hint-placeholder-count="3">
+          <option value="{{ sz.value }}">{{ sz.label }}</option>
+        </sc-for>
+      </select>
+
+      <div style="font-size:13.5px;color:#0B1F44;margin-bottom:9px">Quantity</div>
+      <div style="display:flex;gap:14px;align-items:stretch;flex-wrap:wrap">
+        <div style="display:flex;align-items:center;border:1px solid #D8DAE0">
+          <button onClick="{{ dec }}" style="width:38px;height:46px;border:0;background:#fff;font-size:17px;color:#0B1F44;cursor:pointer">-</button>
+          <span style="width:38px;text-align:center;font-size:15px">{{ qty }}</span>
+          <button onClick="{{ inc }}" style="width:38px;height:46px;border:0;background:#fff;font-size:17px;color:#0B1F44;cursor:pointer">+</button>
+        </div>
+        <button onClick="{{ addToCart }}" style="flex:1 1 240px;min-height:46px;background:#E6288E;color:#fff;border:0;font-size:14px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;cursor:pointer" style-hover="background:#C8137A">{{ cartLabel }}</button>
+      </div>
+      <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:center;margin-top:14px">
+        <button style="background:none;border:0;padding:0;color:#0B1F44;font-size:13px;font-weight:500;letter-spacing:.04em;text-transform:uppercase;cursor:pointer">♡ Add to wishlist ⌄</button>
+        <span style="font-size:12.5px;color:#6E7385">🔒 Secure checkout · 30-day returns</span>
+      </div>
+
+      
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(150px,100%),1fr));gap:1px;background:#E4E4E8;border:1px solid #E4E4E8;margin-top:16px">
+        <div style="background:#fff;padding:13px 14px;display:flex;gap:10px;align-items:flex-start">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E6288E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 auto;margin-top:1px"><path d="M12 3l7 3v5.5c0 4.3-2.9 7.6-7 9.5-4.1-1.9-7-5.2-7-9.5V6l7-3z"></path><path d="M9 12l2.2 2.2L15.5 10"></path></svg>
+          <div><div style="font-size:12.5px;font-weight:600;color:#0B1F44">10-year guarantee</div><div style="font-size:11.5px;color:#6E7385;line-height:1.4">Direct from Emile Henry</div></div>
+        </div>
+        <div style="background:#fff;padding:13px 14px;display:flex;gap:10px;align-items:flex-start">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E6288E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 auto;margin-top:1px"><path d="M7.5 3.5c1.6 0 2.6 1 3 2.4.4-1.4 1.4-2.4 3-2.4"></path><path d="M5 9h14l-1.2 10.2a1.6 1.6 0 0 1-1.6 1.4H7.8a1.6 1.6 0 0 1-1.6-1.4L5 9z"></path><path d="M9.5 12.5v4.5M14.5 12.5v4.5"></path></svg>
+          <div><div style="font-size:12.5px;font-weight:600;color:#0B1F44">Handcrafted in France</div><div style="font-size:11.5px;color:#6E7385;line-height:1.4">Burgundy since 1850</div></div>
+        </div>
+        <div style="background:#fff;padding:13px 14px;display:flex;gap:10px;align-items:flex-start">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E6288E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 auto;margin-top:1px"><path d="M3.5 8.5h17v4h-17z"></path><path d="M5 12.5v8h14v-8"></path><path d="M12 8.5v12"></path><path d="M12 8.5S10.8 4 8.4 4a2.2 2.2 0 0 0 0 4.5M12 8.5S13.2 4 15.6 4a2.2 2.2 0 0 1 0 4.5"></path></svg>
+          <div><div style="font-size:12.5px;font-weight:600;color:#0B1F44">Free gift wrapping</div><div style="font-size:11.5px;color:#6E7385;line-height:1.4">Add a note at checkout</div></div>
+        </div>
+      </div>
+
+      <div style="margin-top:22px;border:1px solid #E4E4E8">
+        <div style="background:#FDF0F5;padding:12px 16px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+          <span style="font-size:11.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#C8137A">Frequently bought together</span>
+          <span style="font-size:11.5px;font-weight:600;color:#1F9E6E">{{ bundleMaxSave }}</span>
+        </div>
+
+        <div style="padding:4px 16px 0">
+          <sc-for list="{{ bundleItems }}" as="item" hint-placeholder-count="4">
+            <div style="display:flex;gap:12px;align-items:flex-start;padding:13px 0;border-bottom:1px solid #EDEEF1">
+              <label style="display:flex;align-items:center;gap:12px;flex:1 1 auto;min-width:0;cursor:pointer">
+                <input type="checkbox" checked="{{ item.selected }}" disabled="{{ item.locked }}" onChange="{{ item.toggle }}" style="width:20px;height:20px;flex:0 0 auto;accent-color:#E6288E;cursor:pointer">
+                <span style="flex:0 0 auto;width:58px;height:58px;border:1px solid #EDEEF1;overflow:hidden;display:block;background:#F7F7F8">
+                  <image-slot id="{{ item.slotId }}" shape="rect" fit="contain" placeholder="{{ item.short }}"></image-slot>
+                </span>
+                <span style="min-width:0;display:flex;flex-direction:column;gap:3px">
+                  <span style="font-size:13px;font-weight:500;color:#0B1F44;line-height:1.35;text-wrap:pretty">{{ item.name }}</span>
+                  <span style="font-size:11.5px;color:#6E7385;line-height:1.35">{{ item.meta }}</span>
+                </span>
+              </label>
+              <span style="flex:0 0 auto;text-align:right;display:flex;flex-direction:column;gap:2px;padding-top:2px">
+                <span style="font-size:13.5px;font-weight:600;color:#0B1F44">{{ item.priceStr }}</span>
+                <span style="font-size:11px;color:#1F9E6E;font-weight:600">{{ item.saveStr }}</span>
+              </span>
+            </div>
+          </sc-for>
+        </div>
+
+        <div style="padding:14px 16px 16px">
+          <button onClick="{{ toggleAllBundle }}" style="width:100%;min-height:40px;background:#fff;border:1px solid #E6288E;color:#C8137A;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;cursor:pointer" style-hover="background:#FDF0F5">{{ selectAllLabel }}</button>
+
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-top:14px">
+            <span style="font-size:12.5px;color:#6E7385">{{ bundleCountLabel }}</span>
+            <span style="font-size:12.5px;color:#6E7385;text-decoration:line-through">{{ bundleRrpStr }}</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-top:4px">
+            <span style="font-size:13.5px;font-weight:600;color:#0B1F44">Bundle total</span>
+            <span style="display:flex;align-items:baseline;gap:8px"><span style="font-size:21px;font-weight:700;color:#E6288E">{{ bundleTotalStr }}</span><span style="font-size:12px;font-weight:600;color:#1F9E6E">{{ bundleSavedStr }}</span></span>
+          </div>
+          <button onClick="{{ addBundle }}" style="margin-top:12px;width:100%;min-height:48px;background:{{ bundleCtaBg }};color:#fff;border:0;font-size:12.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;cursor:pointer" style-hover="background:#C8137A">{{ bundleCtaLabel }}</button>
+          <p style="margin:10px 0 0;font-size:11.5px;color:#6E7385;line-height:1.5;text-align:center">Ships together in one delivery · Remove anything at checkout</p>
+        </div>
+      </div>
+
+      <p style="margin:28px 0 16px;color:#1A1A1A">Founded in Burgundy – the food and wine heartland of France, in 1850 - the family-run cookware brand of Emile Henry, is always designing new pieces that are useful, beautiful and durable.</p>
+      <p style="margin:0 0 16px;color:#1A1A1A">Discover the Sublime collection, which is crafted with new, versatile ceramic technology. It withstands the high heat of searing, frying or barbecuing, but also allows for gentle cooking at low temperatures, so the sugars in a caramel sauce or custard are gently heated without burning or overcooking. It renders every meal – sublime.</p>
+
+      <p style="margin:0 0 8px;font-weight:600">Features:</p>
+      <ul style="margin:0 0 20px;padding-left:22px;color:#1A1A1A">
+        <li>Handcrafted in France</li>
+        <li>Crafted in 100% natural ceramic</li>
+        <li>Ceramic lead cadmium and nickel free</li>
+        <li>Distributes heat smoothly throughout the pan</li>
+        <li>50% lighter than most other Dutch ovens</li>
+        <li>Suitable for gas, ceramic, halogen &amp; electric hobs</li>
+        <li>Maximum temperature 290 °C with a minimum of -20°C</li>
+        <li>Microwave and dishwasher safe</li>
+        <li>10-year guarantee</li>
+        <li>Presented in Emile Henry packaging</li>
+      </ul>
+
+      <div style="color:#1A1A1A;margin-bottom:22px">
+        <div>Design: {{ colorName }}</div>
+        <div>Size: {{ sizeShort }}</div>
+        <div>Capacity: {{ capacity }}</div>
+      </div>
+
+      <p style="margin:0 0 14px;color:#1A1A1A">Please ensure you read the care and use instructions that come with the product prior to using it.</p>
+
+      <div style="border-top:1px solid #E4E4E8">
+        <sc-for list="{{ rows }}" as="r" hint-placeholder-count="7">
+          <div style="border-bottom:1px solid #E4E4E8">
+            <button onClick="{{ r.onToggle }}" style="width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;background:none;border:0;padding:15px 2px;text-align:left;cursor:pointer;color:#1A1A1A;font-size:15px">
+              <span>{{ r.title }}</span>
+              <span style="font-size:19px;color:#6E7385;flex:0 0 auto">{{ r.sign }}</span>
+            </button>
+            <sc-if value="{{ r.open }}" hint-placeholder-val="{{ false }}">
+              <div style="padding:0 2px 18px;font-size:14px;color:#42506B;line-height:1.65">{{ r.body }}</div>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="margin-top:26px;background:#FBE4EE;padding:26px 20px;text-align:center">
+        <div style="font-weight:600;font-size:15px;color:#0B1F44;margin-bottom:16px">Have a question about this product?</div>
+        <button style="background:#E6288E;color:#fff;border:0;padding:14px 44px;font-size:13.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;cursor:pointer" style-hover="background:#C8137A">Enquire</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="reviews" style="background:#F7F7F8;padding:56px 24px">
+    <div style="max-width:1200px;margin:0 auto">
+      <h2 style="font-size:26px;font-weight:600;color:#0B1F44;margin:0 0 26px;text-align:center">Customer reviews</h2>
+      <div style="background:#fff;border:1px solid #E4E4E8;padding:28px;display:flex;gap:40px;flex-wrap:wrap;align-items:flex-start">
+        <div style="flex:0 1 220px;min-width:200px;text-align:center">
+          <div style="font-size:50px;font-weight:700;line-height:1;color:#0B1F44;letter-spacing:-.03em">4.8</div>
+          <div style="color:#1F9E6E;letter-spacing:3px;font-size:18px;margin:8px 0">★★★★★</div>
+          <div style="font-size:13px;color:#6E7385">47 verified reviews</div>
+          <div style="background:#FCE9F1;color:#C8137A;font-size:12.5px;font-weight:600;padding:8px;margin-top:14px">96% would buy again</div>
+          <button style="margin-top:12px;width:100%;background:#0B1F44;color:#fff;border:0;padding:12px;font-size:12.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;cursor:pointer">Write a review</button>
+        </div>
+        <div style="flex:1 1 260px;min-width:230px;max-width:340px">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:9px"><span style="font-size:13px;width:32px;color:#6E7385">5 ★</span><span style="flex:1;height:8px;background:#EDEEF1"><span style="display:block;width:81%;height:8px;background:#1F9E6E"></span></span><span style="font-size:12.5px;color:#6E7385;width:22px;text-align:right">38</span></div>
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:9px"><span style="font-size:13px;width:32px;color:#6E7385">4 ★</span><span style="flex:1;height:8px;background:#EDEEF1"><span style="display:block;width:13%;height:8px;background:#1F9E6E"></span></span><span style="font-size:12.5px;color:#6E7385;width:22px;text-align:right">6</span></div>
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:9px"><span style="font-size:13px;width:32px;color:#6E7385">3 ★</span><span style="flex:1;height:8px;background:#EDEEF1"><span style="display:block;width:4%;height:8px;background:#1F9E6E"></span></span><span style="font-size:12.5px;color:#6E7385;width:22px;text-align:right">2</span></div>
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:9px"><span style="font-size:13px;width:32px;color:#6E7385">2 ★</span><span style="flex:1;height:8px;background:#EDEEF1"><span style="display:block;width:2%;height:8px;background:#1F9E6E"></span></span><span style="font-size:12.5px;color:#6E7385;width:22px;text-align:right">1</span></div>
+          <div style="display:flex;align-items:center;gap:12px"><span style="font-size:13px;width:32px;color:#6E7385">1 ★</span><span style="flex:1;height:8px;background:#EDEEF1"></span><span style="font-size:12.5px;color:#6E7385;width:22px;text-align:right">0</span></div>
+          <div style="margin-top:18px;display:flex;gap:8px;flex-wrap:wrap">
+            <span style="border:1px solid #E4E4E8;padding:5px 10px;font-size:12px;color:#6E7385">Even heat (14)</span>
+            <span style="border:1px solid #E4E4E8;padding:5px 10px;font-size:12px;color:#6E7385">Lightweight (11)</span>
+            <span style="border:1px solid #E4E4E8;padding:5px 10px;font-size:12px;color:#6E7385">Easy to clean (9)</span>
+          </div>
+        </div>
+        <div style="flex:1 1 380px;min-width:280px">
+          <div style="border-bottom:1px solid #EDEEF1;padding-bottom:16px;margin-bottom:16px">
+            <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap"><span style="color:#1F9E6E;letter-spacing:2px;font-size:13px">★★★★★</span><span style="font-size:12px;color:#6E7385">12 August 2026</span></div>
+            <div style="font-weight:600;font-size:14.5px;margin:7px 0 4px;color:#0B1F44">Replaced my cast iron and I don't miss it</div>
+            <p style="margin:0 0 6px;font-size:13.5px;color:#42506B">Half the weight of my old Dutch oven and the lamb shanks came out perfect. Straight from the oven to the table and it still looks smart.</p>
+            <div style="font-size:12px;color:#6E7385">Rachel M. · <span style="color:#1F9E6E">✓ Verified purchase</span></div>
+          </div>
+          <div style="border-bottom:1px solid #EDEEF1;padding-bottom:16px;margin-bottom:16px">
+            <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap"><span style="color:#1F9E6E;letter-spacing:2px;font-size:13px">★★★★★</span><span style="font-size:12px;color:#6E7385">29 July 2026</span></div>
+            <div style="font-weight:600;font-size:14.5px;margin:7px 0 4px;color:#0B1F44">Beautiful piece, check your cooktop first</div>
+            <p style="margin:0 0 6px;font-size:13.5px;color:#42506B">Cooks beautifully on gas. Worth noting it won't sit on induction without a disc — the care section here saved me returning it.</p>
+            <div style="font-size:12px;color:#6E7385">David T. · <span style="color:#1F9E6E">✓ Verified purchase</span></div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap"><span style="color:#1F9E6E;letter-spacing:2px;font-size:13px">★★★★☆</span><span style="font-size:12px;color:#6E7385">3 July 2026</span></div>
+            <div style="font-weight:600;font-size:14.5px;margin:7px 0 4px;color:#0B1F44">Great size for a family of five</div>
+            <p style="margin:0 0 6px;font-size:13.5px;color:#42506B">5.8L handles a whole chicken with vegetables around it. The lid is a little heavy but that's what keeps the moisture in.</p>
+            <div style="font-size:12px;color:#6E7385">Priya S. · <span style="color:#1F9E6E">✓ Verified purchase</span></div>
+          </div>
+          <a href="#" style="display:inline-block;margin-top:18px;font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase">See all 47 reviews</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="collection" style="max-width:1200px;margin:0 auto;padding:56px 24px">
+    <h2 style="font-size:26px;font-weight:600;color:#0B1F44;margin:0 0 6px;text-align:center">Complete your collection</h2>
+    <p style="margin:0 auto 28px;color:#6E7385;text-align:center;max-width:60ch">The casserole is the centrepiece. Add the supporting cast for roasts, bakes and the table.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:16px">
+      <sc-for list="{{ collItems }}" as="p" hint-placeholder-count="4">
+        <div style="border:1px solid #E4E4E8;display:flex;flex-direction:column;background:#fff" style-hover="border-color:#E6288E">
+          <a href="#" style="display:block;aspect-ratio:4/3;min-width:0;overflow:hidden"><image-slot id="{{ p.slotId }}" shape="rect" placeholder="{{ p.cat }}"></image-slot></a>
+          <div style="padding:13px 15px 15px;display:flex;flex-direction:column;gap:4px;flex:1">
+            <span style="font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#6E7385">{{ p.cat }}</span>
+            <a href="#" style="font-size:13.5px;font-weight:600;color:#0B1F44;line-height:1.35;text-wrap:pretty">{{ p.name }}</a>
+            <span style="display:flex;gap:8px;align-items:baseline;margin-top:2px"><span style="font-size:15px;font-weight:700;color:#E6288E">{{ p.priceStr }}</span><span style="font-size:12px;color:#6E7385;text-decoration:line-through">{{ p.rrpStr }}</span></span>
+            <span style="flex:1;min-height:10px"></span>
+            <button onClick="{{ p.add }}" style="width:100%;min-height:44px;background:{{ p.bg }};color:#fff;border:0;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;font-family:inherit" style-hover="background:#C8137A">{{ p.label }}</button>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <div id="faq" style="background:#FDF0F5;padding:56px 24px">
+    <div style="max-width:900px;margin:0 auto">
+      <h2 style="font-size:26px;font-weight:600;color:#0B1F44;margin:0 0 24px;text-align:center">Frequently asked questions</h2>
+      <div style="background:#fff;border:1px solid #E4E4E8">
+        <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="6">
+          <div style="border-bottom:1px solid #EDEEF1">
+            <button onClick="{{ f.onToggle }}" style="width:100%;display:flex;justify-content:space-between;gap:16px;align-items:center;background:none;border:0;padding:17px 20px;text-align:left;cursor:pointer;color:#0B1F44">
+              <span style="font-size:15px;font-weight:500">{{ f.q }}</span>
+              <span style="font-size:19px;color:#E6288E;flex:0 0 auto">{{ f.sign }}</span>
+            </button>
+            <sc-if value="{{ f.open }}" hint-placeholder-val="{{ true }}">
+              <div style="padding:0 20px 18px;font-size:14px;color:#42506B;max-width:70ch">{{ f.a }}</div>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+      <div style="text-align:center;margin-top:18px;font-size:13.5px;color:#42506B">Still deciding? <a href="#">Ask our cookware team</a> — we reply within one business day.</div>
+    </div>
+  </div>
+
+  <div style="background:#F7F7F8;padding:52px 24px">
+    <div style="max-width:1200px;margin:0 auto">
+      <h2 style="font-size:26px;font-weight:600;color:#0B1F44;margin:0 0 24px;text-align:center">You may also like</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(215px,100%),1fr));gap:16px">
+        <div style="background:#fff;border:1px solid #EDEEF1"><div style="aspect-ratio:1/1;position:relative;min-width:0;overflow:hidden"><image-slot id="v2-r1" shape="rect" fit="contain" placeholder="Product"></image-slot><span style="position:absolute;top:10px;left:10px;background:#E01B22;color:#fff;font-size:10px;font-weight:600;padding:3px 8px;pointer-events:none">SALE</span></div><div style="padding:15px"><div style="font-size:10.5px;font-weight:600;letter-spacing:.12em;color:#6E7385">EMILE HENRY</div><div style="font-size:13.5px;margin:4px 0 8px;color:#0B1F44">Sublime Round Casserole Indigo 31cm/5.8l</div><div><span style="font-size:12.5px;color:#6E7385;text-decoration:line-through">$649</span> <span style="color:#E6288E;font-weight:700;font-size:16px">$356</span></div></div></div>
+        <div style="background:#fff;border:1px solid #EDEEF1"><div style="aspect-ratio:1/1;position:relative;min-width:0;overflow:hidden"><image-slot id="v2-r2" shape="rect" fit="contain" placeholder="Product"></image-slot><span style="position:absolute;top:10px;left:10px;background:#E01B22;color:#fff;font-size:10px;font-weight:600;padding:3px 8px;pointer-events:none">SALE</span></div><div style="padding:15px"><div style="font-size:10.5px;font-weight:600;letter-spacing:.12em;color:#6E7385">EMILE HENRY</div><div style="font-size:13.5px;margin:4px 0 8px;color:#0B1F44">Sublime Rectangular Dish Graphite 35cm</div><div><span style="font-size:12.5px;color:#6E7385;text-decoration:line-through">$299</span> <span style="color:#E6288E;font-weight:700;font-size:16px">$179</span></div></div></div>
+        <div style="background:#fff;border:1px solid #EDEEF1"><div style="aspect-ratio:1/1;position:relative;min-width:0;overflow:hidden"><image-slot id="v2-r3" shape="rect" fit="contain" placeholder="Product"></image-slot></div><div style="padding:15px"><div style="font-size:10.5px;font-weight:600;letter-spacing:.12em;color:#6E7385">CHASSEUR</div><div style="font-size:13.5px;margin:4px 0 8px;color:#0B1F44">Low Round Casserole Dish Duck Egg Blue 30cm</div><div><span style="font-size:12.5px;color:#6E7385;text-decoration:line-through">$779</span> <span style="color:#E6288E;font-weight:700;font-size:16px">$319</span></div></div></div>
+        <div style="background:#fff;border:1px solid #EDEEF1"><div style="aspect-ratio:1/1;position:relative;min-width:0;overflow:hidden"><image-slot id="v2-r4" shape="rect" fit="contain" placeholder="Product"></image-slot></div><div style="padding:15px"><div style="font-size:10.5px;font-weight:600;letter-spacing:.12em;color:#6E7385">EMILE HENRY</div><div style="font-size:13.5px;margin:4px 0 8px;color:#0B1F44">Ceramic Trivet Natural 21cm</div><div><span style="color:#E6288E;font-weight:700;font-size:16px">$49</span></div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#FBE4EE;padding:44px 24px;text-align:center">
+    <h2 style="font-size:24px;font-weight:600;color:#0B1F44;margin:0 0 16px">Get Exclusive Offers &amp; Updates</h2>
+    <div style="max-width:400px;margin:0 auto;display:flex;border-bottom:1px solid #0B1F44">
+      <input placeholder="Enter your email" style="flex:1;min-width:0;border:0;background:transparent;padding:10px 4px;outline:none;font-size:14px;color:#0B1F44">
+      <button style="background:none;border:0;font-size:11.5px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;cursor:pointer;color:#0B1F44">Sign up</button>
+    </div>
+  </div>
+
+  <div style="padding:44px 24px 28px">
+    <div style="max-width:1360px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:30px;font-size:13.5px">
+      <div>
+        <div style="font-weight:600;margin-bottom:10px;color:#0B1F44">Email</div><a href="#">enquiries@pok.com.au</a>
+        <div style="font-weight:600;margin:18px 0 10px;color:#0B1F44">Phone</div><div style="color:#6E7385">Sales &amp; Enquiries (02) 9662 1099</div>
+      </div>
+      <div><div style="font-weight:600;margin-bottom:10px;color:#0B1F44">Peter's of Kensington</div><div style="display:grid;gap:7px"><a href="#">Gift Cards</a><a href="#">Daily Deals</a><a href="#">Our Story</a><a href="#">FAQs</a><a href="#">Contact Us</a></div></div>
+      <div><div style="font-weight:600;margin-bottom:10px;color:#0B1F44">Shipping &amp; Returns</div><div style="display:grid;gap:7px"><a href="#">Postage Rates</a><a href="#">Order Tracking</a><a href="#">Return Policy</a><a href="#">Click &amp; Collect</a></div></div>
+      <div><div style="font-weight:600;margin-bottom:10px;color:#0B1F44">Store Locations</div><div style="display:grid;gap:7px"><a href="#">Kensington Store</a><a href="#">Birkenhead Point Store</a></div></div>
+    </div>
+  </div>
+  <div style="background:#0B1F44;color:#fff;padding:14px 24px;font-size:12px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
+    <span>Peter's of Kensington is a secure website using SSL encryption for all transactions.</span>
+    <span style="color:#B9C2D4">© 2026 - Peter's of Kensington</span>
+  </div>
+
+  <sc-if value="{{ barVisible }}" hint-placeholder-val="{{ false }}">
+    <div style="position:fixed;left:0;right:0;bottom:0;z-index:50;background:#fff;border-top:1px solid #E4E4E8;box-shadow:0 -6px 22px rgba(11,31,68,.12);animation:popIn .18s ease">
+      <div style="max-width:1360px;margin:0 auto;padding:10px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+        <div style="width:50px;height:50px;border:1px solid #EDEEF1;flex:0 0 auto"><image-slot id="v2-bar" shape="rect" fit="contain" placeholder=""></image-slot></div>
+        <div style="flex:1 1 180px;min-width:140px">
+          <div style="font-size:13px;font-weight:500;line-height:1.3;color:#0B1F44">Sublime Round Casserole {{ colorName }} {{ sizeShort }}</div>
+          <div style="font-size:12px;color:#E01B22;font-weight:600">Only {{ stock }} left · {{ countdown }} to dispatch today</div>
+        </div>
+        <div style="display:flex;align-items:baseline;gap:8px"><span style="font-size:12.5px;color:#6E7385;text-decoration:line-through">${{ rrp }}</span><span style="font-size:20px;font-weight:700;color:#E6288E">${{ price }}</span></div>
+        <button onClick="{{ addToCart }}" style="flex:0 1 210px;min-height:44px;background:#E6288E;color:#fff;border:0;font-size:12.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;cursor:pointer" style-hover="background:#C8137A">{{ cartLabel }}</button>
+      </div>
+    </div>
+  </sc-if>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;stickyBuyBar&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;CRO&quot;},&quot;showLiveViewers&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;CRO&quot;}}">
+class Component extends DCLogic {
+  state = { c: 0, s: 2, qty: 1, faq: 0, rows: {}, added: false, scrolled: false, viewers: 18, secs: 4 * 3600 + 12 * 60, bundle: { trivet: true, spoon: true, mitts: false }, bundleAdded: false, payOpen: false, collAdded: {} };
+
+  componentDidMount() {
+    this.onScroll = () => {
+      const y = window.scrollY || (document.scrollingElement || document.documentElement).scrollTop || document.body.scrollTop || 0;
+      const next = y > 620;
+      if (next !== this.state.scrolled) this.setState({ scrolled: next });
+    };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    this.onScroll();
+    this._tick = setInterval(() => this.setState(st => ({ secs: Math.max(0, st.secs - 1) })), 1000);
+    this._peek = setInterval(() => this.setState({ viewers: 14 + Math.floor(Math.random() * 9) }), 5000);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.onScroll);
+    clearInterval(this._tick); clearInterval(this._peek); clearTimeout(this._t); clearTimeout(this._bt);
+  }
+
+  renderVals() {
+    const colors = [
+      { name: 'Graphite', hex: '#3C3F44' },
+      { name: 'Indigo', hex: '#28324F' },
+      { name: 'Clay', hex: '#C2A079' },
+      { name: 'Fig', hex: '#6E4638' }
+    ];
+    const sizes = [
+      { short: '24cm/2.5l', cap: '2.5L', rrp: 449, price: 246, stock: 7, sold: 9 },
+      { short: '28cm/4.2l', cap: '4.2L', rrp: 549, price: 299, stock: 5, sold: 14 },
+      { short: '31cm/5.8l', cap: '5.8L', rrp: 649, price: 356, stock: 3, sold: 12 }
+    ];
+    const c = colors[this.state.c], s = sizes[this.state.s];
+
+    const rowData = [
+      ['Product Specs', 'Design: ' + c.name + ' · Size: ' + s.short + ' · Capacity: ' + s.cap + ' · Material: 100% natural ceramic, lead, cadmium and nickel free · Temperature range: \u221220\u00B0C to 290\u00B0C · Guarantee: 10 years · Product number: 267202.'],
+      ['Important Information: Care & Heat Sources', 'Heat sources: gas \u2713 \u00B7 electric/radiant \u2713 \u00B7 ceramic \u2713 \u00B7 halogen \u2713 \u00B7 oven to 290\u00B0C \u2713 \u00B7 grill and barbecue \u2713 \u00B7 microwave \u2713 \u00B7 dishwasher \u2713 \u00B7 freezer to \u221220\u00B0C \u2713 \u00B7 induction \u2715 (ceramic isn\u2019t magnetic \u2014 an induction adapter disc will work, though heat spread is slower). Care tips: warm the dish gradually on a low-to-medium flame rather than moving it from fridge to hot oven; rest it on a wooden board or trivet, never a cold or wet surface; let it cool before washing and use warm soapy water with a soft sponge; stick to wood or silicone utensils to protect the glaze, and soak baked-on residue instead of scouring.'],
+      ['Postage Calculator Australia', 'Enter your postcode to see delivery options and timing. Free standard delivery on orders over $99. Express and Click & Collect available at the Kensington and Birkenhead Point stores.'],
+      ['Postage Calculator International', 'We ship to New Zealand, USA, UK, Canada, China, Hong Kong, Japan and more. Enter your country to see rates and estimated transit times at checkout.'],
+      ['Shipping & Returns', 'In stock items are dispatched within 1\u20132 business days. Returns accepted within 30 days in original condition and packaging \u2014 see our returns policy for full details.'],
+      ['Reviews (47)', 'Rated 4.8 out of 5 from 47 verified reviews, with 96% of buyers saying they\u2019d buy again. Read the full reviews below.'],
+      ['\u2714 Complimentary Gift Wrapping Available', 'Add a gift-wrapping note at checkout and we\u2019ll wrap this piece by hand at no extra cost \u2014 ideal for weddings, housewarmings and Christmas.']
+    ];
+
+    const faqData = [
+      ['Can I use the Sublime casserole on an induction cooktop?', 'Not on its own. The Sublime body is 100% natural ceramic, which isn\u2019t magnetic, so an induction hob won\u2019t detect it. It works on gas, electric, ceramic and halogen hobs, in the oven to 290\u00B0C, under the grill and on the barbecue. An induction adapter disc will let you use it on induction, though heat spread is slower and less even.'],
+      ['How hot can it go in the oven?', '290\u00B0C is the maximum, and it handles temperatures down to \u221220\u00B0C, so it goes from freezer to oven to table. Warm it up gradually rather than putting a cold dish into a fully preheated oven.'],
+      ['Is it dishwasher and microwave safe?', 'Yes to both. Let the casserole cool before it goes into the dishwasher, and soak baked-on residue in warm soapy water instead of scouring the glaze.'],
+      ['Which size should I choose?', '24cm/2.5L suits one to two people or a side dish; 28cm/4.2L is the everyday family size; 31cm/5.8L takes a whole chicken with vegetables around it, or a braise for five to six.'],
+      ['How does the ceramic compare to cast iron?', 'It\u2019s around 50% lighter than most cast-iron Dutch ovens and distributes heat smoothly, so it sears at high heat but also handles gentle cooking \u2014 caramel and custard heat without catching. It needs no seasoning and won\u2019t react with acidic ingredients.'],
+      ['What does the 10-year guarantee cover?', 'Emile Henry backs the ceramic against manufacturing defects for 10 years in normal domestic use. Keep your Peter\u2019s of Kensington order confirmation as proof of purchase, and see our returns policy for the first 30 days.']
+    ];
+
+    const pad = n => (n < 10 ? '0' + n : '' + n);
+    const sec = this.state.secs;
+
+    const money = n => '$' + n.toLocaleString('en-AU');
+    const addOnData = [
+      { id: 'trivet', name: 'Emile Henry Ceramic Trivet 22cm', meta: 'Added by 78% of casserole buyers', short: 'Trivet', slotId: 'ups-trivet', price: 39, rrp: 49 },
+      { id: 'spoon', name: 'Beechwood Large Serving Spoon', meta: 'Won\u2019t scratch the ceramic glaze', short: 'Spoon', slotId: 'ups-spoon', price: 15, rrp: 19 },
+      { id: 'mitts', name: 'Heat-resistant Oven Mitts (pair)', meta: 'Rated to 290\u00B0C \u2014 matches this dish', short: 'Mitts', slotId: 'ups-mitts', price: 25, rrp: 35 }
+    ];
+    const sel = this.state.bundle;
+    const bundleItems = [{
+      name: 'Sublime Round Casserole ' + c.name + ' ' + s.short,
+      meta: 'This item \u00B7 always included',
+      short: 'This item', slotId: 'v3-b1', locked: true, selected: true,
+      priceStr: money(s.price), saveStr: 'save ' + money(s.rrp - s.price),
+      toggle: () => {}
+    }].concat(addOnData.map(a => ({
+      name: a.name, meta: a.meta, short: a.short, slotId: a.slotId, locked: false,
+      selected: !!sel[a.id],
+      priceStr: money(a.price),
+      saveStr: 'save ' + money(a.rrp - a.price),
+      toggle: () => this.setState(st => ({ bundle: Object.assign({}, st.bundle, { [a.id]: !st.bundle[a.id] }), bundleAdded: false }))
+    })));
+
+    const chosen = addOnData.filter(a => sel[a.id]);
+    const bundleTotal = s.price + chosen.reduce((t, a) => t + a.price, 0);
+    const bundleRrp = s.rrp + chosen.reduce((t, a) => t + a.rrp, 0);
+    const allOn = addOnData.every(a => sel[a.id]);
+
+    const collData = [
+      { id: 'c1', slotId: 'v2-c1', cat: 'Casserole pots & dishes', name: 'Emile Henry Oval Casserole 4.1L', price: 289, rrp: 349 },
+      { id: 'c2', slotId: 'v2-c2', cat: 'French ovens', name: 'Emile Henry Delight Round Stewpot 2.5L', price: 219, rrp: 269 },
+      { id: 'c3', slotId: 'v2-c3', cat: 'Roasting dishes', name: 'Emile Henry Rectangular Roaster 42cm', price: 119, rrp: 149 },
+      { id: 'c5', slotId: 'v2-c5', cat: 'Bakeware', name: 'Emile Henry Oval Gratin Dish 35cm', price: 79, rrp: 99 }
+    ];
+    const ca = this.state.collAdded;
+    return {
+      collItems: collData.map(p => ({
+        slotId: p.slotId, cat: p.cat, name: p.name,
+        priceStr: money(p.price), rrpStr: 'RRP ' + money(p.rrp),
+        label: ca[p.id] ? '\u2713 Added to cart' : '+ Add to cart',
+        bg: ca[p.id] ? '#0B1F44' : '#E6288E',
+        add: () => {
+          this.setState(st => ({ collAdded: Object.assign({}, st.collAdded, { [p.id]: true }) }));
+          clearTimeout(this['_c' + p.id]);
+          this['_c' + p.id] = setTimeout(() => this.setState(st => ({ collAdded: Object.assign({}, st.collAdded, { [p.id]: false }) })), 2200);
+        }
+      })),
+      payOpen: this.state.payOpen,
+      payToggleLabel: this.state.payOpen ? 'Hide \u25B4' : 'Compare \u25BE',
+      togglePay: () => this.setState(st => ({ payOpen: !st.payOpen })),
+      instalmentStr: '$' + (s.price / 4).toFixed(2),
+      bundleItems,
+      bundleMaxSave: 'Save ' + money(addOnData.reduce((t, a) => t + (a.rrp - a.price), 0)) + ' on the extras',
+      bundleCountLabel: chosen.length ? chosen.length + (chosen.length === 1 ? ' extra selected' : ' extras selected') : 'Casserole only',
+      bundleRrpStr: bundleRrp > bundleTotal ? money(bundleRrp) : '',
+      bundleTotalStr: money(bundleTotal),
+      bundleSavedStr: bundleRrp > bundleTotal ? 'you save ' + money(bundleRrp - bundleTotal) + ' off RRP' : '',
+      selectAllLabel: allOn ? 'Clear all extras' : 'Add all ' + addOnData.length + ' extras \u2014 save ' + money(addOnData.reduce((t, a) => t + (a.rrp - a.price), 0)),
+      toggleAllBundle: () => this.setState(st => {
+        const next = {};
+        addOnData.forEach(a => { next[a.id] = !allOn; });
+        return { bundle: next, bundleAdded: false };
+      }),
+      bundleCtaLabel: this.state.bundleAdded
+        ? '\u2713 Added to cart'
+        : 'Add ' + (chosen.length + 1) + (chosen.length ? ' items' : ' item') + ' to cart \u2014 ' + money(bundleTotal),
+      bundleCtaBg: this.state.bundleAdded ? '#0B1F44' : '#E6288E',
+      addBundle: () => {
+        this.setState({ bundleAdded: true });
+        clearTimeout(this._bt);
+        this._bt = setTimeout(() => this.setState({ bundleAdded: false }), 2200);
+      },
+      barVisible: (this.props.stickyBuyBar ?? true) && this.state.scrolled,
+      colorName: c.name,
+      sizeShort: s.short,
+      capacity: s.cap,
+      rrp: s.rrp.toLocaleString(),
+      price: s.price.toLocaleString(),
+      saveAmt: (s.rrp - s.price).toLocaleString(),
+      savePct: Math.round((1 - s.price / s.rrp) * 100),
+      instalment: Math.round(s.price / 4),
+      bundlePrice: (s.price + 49 + 19 - 18).toLocaleString(),
+      stock: s.stock,
+      stockPct: Math.max(8, Math.round((s.stock / 12) * 100)) + '%',
+      soldCopy: s.sold + ' sold in the last 24 hours',
+      viewers: (this.props.showLiveViewers ?? true) ? this.state.viewers : 16,
+      countdown: pad(Math.floor(sec / 3600)) + 'h ' + pad(Math.floor((sec % 3600) / 60)) + 'm ' + pad(sec % 60) + 's',
+      qty: this.state.qty,
+      cartLabel: this.state.added ? '\u2713 Added to cart' : '+ Add to cart',
+      sizeValue: String(this.state.s),
+      sizeOpts: sizes.map((x, i) => ({ value: String(i), label: 'Emile Henry - Sublime Round Casserole ' + c.name + ' ' + x.short })),
+      onSize: e => this.setState({ s: Number(e.target.value), added: false }),
+      swatches: colors.map((x, i) => ({
+        name: x.name, hex: x.hex, selected: i === this.state.c,
+        onSelect: () => this.setState({ c: i, added: false })
+      })),
+      rows: rowData.map((r, i) => ({
+        title: r[0], body: r[1],
+        open: !!this.state.rows[i],
+        sign: this.state.rows[i] ? '\u2212' : '+',
+        onToggle: () => this.setState(st => ({ rows: Object.assign({}, st.rows, { [i]: !st.rows[i] }) }))
+      })),
+      faqs: faqData.map((f, i) => ({
+        q: f[0], a: f[1],
+        open: this.state.faq === i,
+        sign: this.state.faq === i ? '\u2212' : '+',
+        onToggle: () => this.setState({ faq: this.state.faq === i ? -1 : i })
+      })),
+      inc: () => this.setState(st => ({ qty: st.qty + 1 })),
+      dec: () => this.setState(st => ({ qty: Math.max(1, st.qty - 1) })),
+      addToCart: () => {
+        this.setState({ added: true });
+        clearTimeout(this._t);
+        this._t = setTimeout(() => this.setState({ added: false }), 2200);
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>

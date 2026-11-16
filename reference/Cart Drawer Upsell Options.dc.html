@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<meta name="ext-resource-dependency" content="assets/cart-casserole.jpeg">
+<meta name="ext-resource-dependency" content="assets/cart-grinder.jpg">
+<meta name="ext-resource-dependency" content="assets/cart-trivet.jpg">
+<meta name="ext-resource-dependency" content="assets/cart-spoon.jpeg">
+<meta name="ext-resource-dependency" content="assets/cart-mitts.avif">
+<meta name="ext-resource-dependency" content="assets/cart-gratin.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap">
+<script src="./image-slot.js"></script>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #E9EAEE; font-family: Poppins, system-ui, sans-serif; color: #1A1A1A; -webkit-font-smoothing: antialiased; }
+  a { color: #E6288E; text-decoration: none; }
+  a:hover { color: #0B1F44; text-decoration: underline; }
+  button, input { font-family: inherit; }
+  .hs { overflow-x: auto; scrollbar-width: none; scroll-snap-type: x mandatory; }
+  .hs::-webkit-scrollbar { display: none; }
+</style>
+</helmet>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240"><rect width="240" height="240" fill="#E6288E"></rect><path d="M84 96h72l-6 64H90z" fill="none" stroke="#fff" stroke-width="10" stroke-linejoin="round"></path><path d="M100 96v-8a20 20 0 0 1 40 0v8" fill="none" stroke="#fff" stroke-width="10"></path></svg></template>
+<section style="padding:48px 40px;display:flex;flex-direction:column;gap:24px">
+  <div style="display:flex;flex-direction:column;gap:6px;max-width:900px">
+    <div style="font-size:12px;font-weight:600;letter-spacing:.1em;color:#6E7385;text-transform:uppercase">Cart drawer · upsell</div>
+    <div style="font-size:26px;font-weight:600;color:#0B1F44">Frequently bought together, three ways</div>
+    <div style="font-size:14px;color:#3D4152;text-wrap:pretty">Recommendations come from the casserole's category: trivet, oven mitts, gratin dish, wooden spoon. All three drawers are live: add items and the cart and subtotal update.</div>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start">
+
+    <div id="2a" style="display:flex;flex-direction:column;gap:14px;width:420px">
+      <div style="display:flex;align-items:center;gap:10px"><span style="background:#0B1F44;color:#fff;font-size:12px;font-weight:600;padding:3px 9px">2a</span><span style="font-size:15px;font-weight:600;color:#0B1F44">Swipeable “pairs well with” rail</span></div>
+      <div style="background:#F4F4F6;box-shadow:0 10px 34px rgba(11,31,68,.16);display:flex;flex-direction:column">
+        <div style="background:#fff;padding:20px 22px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:21px;font-weight:600;color:#0B1F44">Your Cart ({{ a.count }})</span><span style="font-size:22px;color:#0B1F44">✕</span></div>
+        <div style="padding:16px 18px 4px;display:flex;flex-direction:column;gap:12px">
+          <sc-for list="{{ a.items }}" as="it" hint-placeholder-count="2">
+            <div style="background:#fff;padding:14px;display:flex;gap:14px;position:relative">
+              <div style="flex:0 0 84px;height:84px;background:#F7F7F8"><sc-if value="{{ it.img }}" hint-placeholder-val="{{ false }}"><div role="img" aria-label="{{ it.name }}" style="width:100%;height:100%;background:#F7F7F8 center/contain no-repeat;background-image:url('{{ it.img }}');background-origin:content-box;padding:6px"></div></sc-if><sc-if value="{{ it.noImg }}" hint-placeholder-val="{{ false }}"><image-slot id="{{ it.slot }}" shape="rect" fit="contain" placeholder="{{ it.short }}"></image-slot></sc-if></div>
+              <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px">
+                <span style="font-size:14px;font-weight:600;color:#0B1F44;padding-right:22px">{{ it.brand }}</span>
+                <span style="font-size:13.5px;color:#1A1A1A;line-height:1.4">{{ it.name }}</span>
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px">
+                  <div style="display:flex;align-items:center;background:#EDEEF1"><span style="width:28px;text-align:center">-</span><span style="width:34px;height:34px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #DDD;font-size:15px">1</span><span style="width:28px;text-align:center">+</span></div>
+                  <span style="font-size:15px;font-weight:600;color:#E6288E">{{ it.priceStr }}</span>
+                </div>
+              </div>
+              <button onClick="{{ it.remove }}" aria-label="Remove" style="position:absolute;top:10px;right:10px;background:none;border:0;color:#E6288E;font-size:17px;cursor:pointer;width:28px;height:28px">✕</button>
+            </div>
+          </sc-for>
+        </div>
+        <div style="padding:14px 0 16px;display:flex;flex-direction:column;gap:10px">
+          <div style="padding:0 18px;display:flex;justify-content:space-between;align-items:baseline"><span style="font-size:14px;font-weight:600;color:#0B1F44">Pairs well with your casserole</span><span style="font-size:12px;color:#6E7385">Swipe →</span></div>
+          <div class="hs" style="display:flex;gap:10px;padding:0 18px;scroll-padding:0 18px">
+            <sc-for list="{{ a.recs }}" as="r" hint-placeholder-count="3">
+              <div style="flex:0 0 140px;scroll-snap-align:start;background:#fff;display:flex;flex-direction:column">
+                <div style="height:104px;background:#F7F7F8;position:relative"><sc-if value="{{ r.img }}" hint-placeholder-val="{{ false }}"><div role="img" aria-label="{{ r.name }}" style="width:100%;height:100%;background:#F7F7F8 center/contain no-repeat;background-image:url('{{ r.img }}');background-origin:content-box;padding:6px"></div></sc-if><sc-if value="{{ r.noImg }}" hint-placeholder-val="{{ false }}"><image-slot id="{{ r.slot }}" shape="rect" fit="contain" placeholder="{{ r.short }}"></image-slot></sc-if><sc-if value="{{ r.tag }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;top:6px;left:6px;background:#0B1F44;color:#fff;font-size:9.5px;font-weight:600;letter-spacing:.05em;padding:3px 6px;text-transform:uppercase">{{ r.tag }}</span></sc-if></div>
+                <div style="padding:9px 10px 10px;display:flex;flex-direction:column;gap:3px;flex:1">
+                  <span style="font-size:11px;font-weight:600;color:#6E7385">{{ r.brand }}</span>
+                  <span style="font-size:12.5px;color:#0B1F44;line-height:1.35;text-wrap:pretty">{{ r.name }}</span>
+                  <span style="display:flex;gap:6px;align-items:baseline"><span style="font-size:13.5px;font-weight:600;color:#E6288E">{{ r.priceStr }}</span><span style="font-size:11px;color:#6E7385;text-decoration:line-through">{{ r.rrpStr }}</span></span>
+                  <span style="flex:1;min-height:6px"></span>
+                  <button onClick="{{ r.toggle }}" style="min-height:36px;border:1px solid {{ r.border }};background:{{ r.bg }};color:{{ r.fg }};font-size:11.5px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;cursor:pointer">{{ r.label }}</button>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+        <div style="background:#fff;padding:16px 22px 18px;display:flex;flex-direction:column;gap:12px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-size:14px">Subtotal:</span><span style="font-size:19px;font-weight:600;color:#0B1F44">{{ a.subtotal }} AUD</span></div>
+          <button style="min-height:48px;background:#E6288E;color:#fff;border:0;font-size:14px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;cursor:pointer">Checkout now</button>
+        </div>
+      </div>
+      <div style="font-size:13px;color:#3D4152;line-height:1.55;text-wrap:pretty">Light-touch and familiar. Sits between cart and subtotal so it's seen right before checkout. One-tap add, and each item drops straight into the cart above. Best for browsing several add-ons.</div>
+    </div>
+
+    <div id="2b" style="display:flex;flex-direction:column;gap:14px;width:420px">
+      <div style="display:flex;align-items:center;gap:10px"><span style="background:#0B1F44;color:#fff;font-size:12px;font-weight:600;padding:3px 9px">2b</span><span style="font-size:15px;font-weight:600;color:#0B1F44">“Complete the set” bundle builder</span></div>
+      <div style="background:#F4F4F6;box-shadow:0 10px 34px rgba(11,31,68,.16);display:flex;flex-direction:column">
+        <div style="background:#fff;padding:20px 22px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:21px;font-weight:600;color:#0B1F44">Your Cart ({{ b.count }})</span><span style="font-size:22px;color:#0B1F44">✕</span></div>
+        <div style="padding:16px 18px 16px;display:flex;flex-direction:column;gap:12px">
+          <div style="background:#fff;display:flex;flex-direction:column">
+            <div style="padding:14px;display:flex;gap:14px">
+              <div style="flex:0 0 84px;height:84px;background:#F7F7F8"><img src="assets/cart-casserole.jpeg" alt="" style="width:100%;height:100%;object-fit:contain;display:block;padding:6px"></div>
+              <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px">
+                <span style="font-size:14px;font-weight:600;color:#0B1F44">Emile Henry</span>
+                <span style="font-size:13.5px;line-height:1.4">Delight Oval Casserole Graphite 4.5L</span>
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px">
+                  <div style="display:flex;align-items:center;background:#EDEEF1"><span style="width:28px;text-align:center">-</span><span style="width:34px;height:34px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #DDD;font-size:15px">1</span><span style="width:28px;text-align:center">+</span></div>
+                  <span style="font-size:15px;font-weight:600;color:#E6288E">$329</span>
+                </div>
+              </div>
+            </div>
+            <div style="border-top:1px dashed #E3C3D3;background:#FDF0F5;padding:12px 14px 14px;display:flex;flex-direction:column;gap:2px">
+              <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:4px"><span style="font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#C8137A">Complete the set</span><span style="font-size:11.5px;font-weight:600;color:#1F9E6E">{{ b.badge }}</span></div>
+              <sc-for list="{{ b.rows }}" as="r" hint-placeholder-count="3">
+                <label style="display:flex;align-items:center;gap:10px;padding:7px 0;cursor:pointer;opacity:{{ r.op }}">
+                  <input type="checkbox" checked="{{ r.checked }}" disabled="{{ r.inCart }}" onChange="{{ r.toggle }}" style="width:20px;height:20px;accent-color:#E6288E;flex:0 0 auto">
+                  <span style="flex:0 0 44px;height:44px;background:#fff"><sc-if value="{{ r.img }}" hint-placeholder-val="{{ false }}"><div role="img" aria-label="{{ r.name }}" style="width:100%;height:100%;background:#F7F7F8 center/contain no-repeat;background-image:url('{{ r.img }}');background-origin:content-box;padding:6px"></div></sc-if><sc-if value="{{ r.noImg }}" hint-placeholder-val="{{ false }}"><image-slot id="{{ r.slot }}" shape="rect" fit="contain" placeholder=" "></image-slot></sc-if></span>
+                  <span style="flex:1;min-width:0;display:flex;flex-direction:column"><span style="font-size:12.5px;color:#0B1F44;line-height:1.3">{{ r.name }}</span><span style="font-size:11px;color:#6E7385">{{ r.note }}</span></span>
+                  <span style="display:flex;flex-direction:column;align-items:flex-end"><span style="font-size:13px;font-weight:600;color:#0B1F44">{{ r.priceStr }}</span><span style="font-size:10.5px;color:#6E7385;text-decoration:line-through">{{ r.rrpStr }}</span></span>
+                </label>
+              </sc-for>
+              <button onClick="{{ b.add }}" disabled="{{ b.disabled }}" style="margin-top:8px;min-height:44px;background:{{ b.btnBg }};color:#fff;border:0;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;cursor:pointer">{{ b.btnLabel }}</button>
+            </div>
+          </div>
+          <sc-for list="{{ b.items }}" as="it" hint-placeholder-count="1">
+            <div style="background:#fff;padding:14px;display:flex;gap:14px;position:relative">
+              <div style="flex:0 0 84px;height:84px;background:#F7F7F8"><sc-if value="{{ it.img }}" hint-placeholder-val="{{ false }}"><div role="img" aria-label="{{ it.name }}" style="width:100%;height:100%;background:#F7F7F8 center/contain no-repeat;background-image:url('{{ it.img }}');background-origin:content-box;padding:6px"></div></sc-if><sc-if value="{{ it.noImg }}" hint-placeholder-val="{{ false }}"><image-slot id="{{ it.slot }}" shape="rect" fit="contain" placeholder="{{ it.short }}"></image-slot></sc-if></div>
+              <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px">
+                <span style="font-size:14px;font-weight:600;color:#0B1F44;padding-right:22px">{{ it.brand }}</span>
+                <span style="font-size:13.5px;line-height:1.4">{{ it.name }}</span>
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px">
+                  <div style="display:flex;align-items:center;background:#EDEEF1"><span style="width:28px;text-align:center">-</span><span style="width:34px;height:34px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #DDD;font-size:15px">1</span><span style="width:28px;text-align:center">+</span></div>
+                  <span style="font-size:15px;font-weight:600;color:#E6288E">{{ it.priceStr }}</span>
+                </div>
+              </div>
+              <button onClick="{{ it.remove }}" aria-label="Remove" style="position:absolute;top:10px;right:10px;background:none;border:0;color:#E6288E;font-size:17px;cursor:pointer;width:28px;height:28px">✕</button>
+            </div>
+          </sc-for>
+        </div>
+        <div style="background:#fff;padding:16px 22px 18px;display:flex;flex-direction:column;gap:12px">
+          <sc-if value="{{ b.saved }}" hint-placeholder-val="{{ false }}"><div style="display:flex;justify-content:space-between;font-size:13px;color:#1F9E6E;font-weight:600"><span>Set savings</span><span>{{ b.saved }}</span></div></sc-if>
+          <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-size:14px">Subtotal:</span><span style="font-size:19px;font-weight:600;color:#0B1F44">{{ b.subtotal }} AUD</span></div>
+          <button style="min-height:48px;background:#E6288E;color:#fff;border:0;font-size:14px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;cursor:pointer">Checkout now</button>
+        </div>
+      </div>
+      <div style="font-size:13px;color:#3D4152;line-height:1.55;text-wrap:pretty">Anchored to the casserole, so the link between products is obvious. Pre-ticks the trivet and oven mitts and adds them all in one tap. Echoes the PDP's “Frequently bought together” box, keeping the experience consistent. Usually the strongest for AOV.</div>
+    </div>
+
+    <div id="2c" style="display:flex;flex-direction:column;gap:14px;width:420px">
+      <div style="display:flex;align-items:center;gap:10px"><span style="background:#0B1F44;color:#fff;font-size:12px;font-weight:600;padding:3px 9px">2c</span><span style="font-size:15px;font-weight:600;color:#0B1F44">“Just added” confirmation + picks</span></div>
+      <div style="background:#F4F4F6;box-shadow:0 10px 34px rgba(11,31,68,.16);display:flex;flex-direction:column">
+        <div style="background:#fff;padding:18px 22px;display:flex;justify-content:space-between;align-items:center"><span style="display:flex;align-items:center;gap:10px;font-size:17px;font-weight:600;color:#0B1F44"><span style="width:26px;height:26px;border-radius:999px;background:#1F9E6E;color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px">✓</span>Added to your cart</span><span style="font-size:22px;color:#0B1F44">✕</span></div>
+        <div style="background:#fff;border-top:1px solid #EDEEF1;padding:12px 22px 16px;display:flex;gap:14px;align-items:center">
+          <div style="flex:0 0 64px;height:64px;background:#F7F7F8"><img src="assets/cart-casserole.jpeg" alt="" style="width:100%;height:100%;object-fit:contain;display:block;padding:6px"></div>
+          <div style="flex:1;min-width:0;display:flex;flex-direction:column"><span style="font-size:13px;font-weight:600;color:#0B1F44">Emile Henry</span><span style="font-size:13px;line-height:1.35">Delight Oval Casserole Graphite 4.5L</span></div>
+          <span style="font-size:15px;font-weight:600;color:#E6288E">$329</span>
+        </div>
+        <div style="padding:18px 18px 6px;display:flex;flex-direction:column;gap:12px">
+          <div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:15px;font-weight:600;color:#0B1F44">Cooks who bought this also added</span><span style="font-size:12.5px;color:#6E7385">Picked from Emile Henry cookware &amp; accessories</span></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+            <sc-for list="{{ c.recs }}" as="r" hint-placeholder-count="4">
+              <div style="background:#fff;display:flex;flex-direction:column;border:1px solid {{ r.cardBorder }}">
+                <div style="height:118px;background:#F7F7F8;position:relative"><sc-if value="{{ r.img }}" hint-placeholder-val="{{ false }}"><div role="img" aria-label="{{ r.name }}" style="width:100%;height:100%;background:#F7F7F8 center/contain no-repeat;background-image:url('{{ r.img }}');background-origin:content-box;padding:6px"></div></sc-if><sc-if value="{{ r.noImg }}" hint-placeholder-val="{{ false }}"><image-slot id="{{ r.slot }}" shape="rect" fit="contain" placeholder="{{ r.short }}"></image-slot></sc-if><span style="position:absolute;top:6px;right:6px;background:#1F9E6E;color:#fff;font-size:10px;font-weight:600;padding:2px 6px">{{ r.pct }}</span></div>
+                <div style="padding:10px 11px 11px;display:flex;flex-direction:column;gap:3px;flex:1">
+                  <span style="font-size:12.5px;color:#0B1F44;line-height:1.35;text-wrap:pretty">{{ r.name }}</span>
+                  <span style="font-size:11px;color:#1F9E6E">★★★★★ <span style="color:#6E7385">{{ r.reviews }}</span></span>
+                  <span style="display:flex;gap:6px;align-items:baseline"><span style="font-size:14px;font-weight:600;color:#E6288E">{{ r.priceStr }}</span><span style="font-size:11px;color:#6E7385;text-decoration:line-through">{{ r.rrpStr }}</span></span>
+                  <span style="flex:1;min-height:6px"></span>
+                  <button onClick="{{ r.toggle }}" style="min-height:38px;border:0;background:{{ r.bg }};color:#fff;font-size:11.5px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;cursor:pointer">{{ r.label }}</button>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+        <div style="background:#fff;margin-top:12px;padding:16px 22px 18px;display:flex;flex-direction:column;gap:12px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-size:14px">Subtotal ({{ c.count }} items):</span><span style="font-size:19px;font-weight:600;color:#0B1F44">{{ c.subtotal }} AUD</span></div>
+          <div style="display:grid;grid-template-columns:1fr 1.4fr;gap:10px">
+            <button style="min-height:48px;background:#fff;color:#0B1F44;border:1px solid #0B1F44;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;cursor:pointer">View cart</button>
+            <button style="min-height:48px;background:#E6288E;color:#fff;border:0;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;cursor:pointer">Checkout now</button>
+          </div>
+        </div>
+      </div>
+      <div style="font-size:13px;color:#3D4152;line-height:1.55;text-wrap:pretty">Opens straight after add-to-cart. Confirms the action first, then gives the 2×2 grid of recommendations most of the drawer. Bigger images and ratings build trust for higher-ticket add-ons like the gratin dish. The cart stays one tap away.</div>
+    </div>
+
+  </div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { a: {}, b: { sel: { trivet: true, mitts: true, spoon: false }, inCart: {} }, c: {} };
+  P = {
+    trivet: { img: 'assets/cart-trivet.jpg', noImg: false, brand: 'Emile Henry', name: 'Hand-painted Ceramic Trivet', short: 'Trivet', price: 39, rrp: 49, note: 'Protects your benchtop', reviews: '(62)', pct: '78% add' },
+    disc: { img: '', noImg: true, brand: 'Emile Henry', name: 'Induction Disc 21cm', short: 'Induction disc', price: 49, rrp: 59, note: 'Needed for induction cooktops', reviews: '(41)', pct: '54% add' },
+    gratin: { img: 'assets/cart-gratin.jpg', noImg: false, brand: 'Emile Henry', name: 'Oval Gratin Dish Graphite 35cm', short: 'Gratin dish', price: 79, rrp: 99, note: '', reviews: '(88)', pct: '31% add' },
+    spoon: { img: 'assets/cart-spoon.jpeg', noImg: false, brand: 'Scanpan', name: 'Olive Wood Spoon 30cm', short: 'Spoon', price: 19, rrp: 24, note: 'Safe on glazed ceramic', reviews: '(27)', pct: '40% add' },
+    mitts: { img: 'assets/cart-mitts.avif', noImg: false, brand: 'Peters', name: 'Quilted Oven Mitt Pair Charcoal', short: 'Oven mitts', price: 29, rrp: 39, note: 'Heat-resistant to 250°C', reviews: '(19)', pct: '36% add' }
+  };
+  base = [
+    { img: 'assets/cart-casserole.jpeg', noImg: false, brand: 'Emile Henry', name: 'Delight Oval Casserole Graphite 4.5L', short: 'Casserole', price: 329, key: 'casserole' },
+    { img: 'assets/cart-grinder.jpg', noImg: false, brand: 'La Cafetiere', name: 'Hand Coffee Grinder w/Storage Copper Finish', short: 'Grinder', price: 43, key: 'grinder' }
+  ];
+  renderVals() {
+    const P = this.P, m = n => '$' + n.toLocaleString('en-AU');
+    const st = this.state;
+    const set = (k, fn) => this.setState(s => ({ [k]: fn(s[k]) }));
+    const addedItems = (k, map, pre) => Object.keys(map).filter(id => map[id]).map(id => ({
+      ...P[id], slot: pre + '-cart-' + id, priceStr: m(P[id].price),
+      remove: () => set(k, o => k === 'b' ? { ...o, inCart: { ...o.inCart, [id]: false } } : { ...o, [id]: false })
+    }));
+    const baseItems = pre => this.base.map(b => ({ ...b, slot: pre + '-' + b.key, priceStr: m(b.price), remove: () => {} }));
+    const sum = arr => arr.reduce((t, x) => t + x.price, 0);
+
+    const aAdded = addedItems('a', st.a, '2a');
+    const aItems = baseItems('2a').concat(aAdded);
+    const a = {
+      items: aItems, count: aItems.length, subtotal: m(sum(aItems)),
+      recs: ['trivet', 'mitts', 'gratin', 'spoon'].map(id => {
+        const on = !!st.a[id];
+        return { ...P[id], slot: '2a-rec-' + id, tag: id === 'trivet' ? 'Best match' : (id === 'mitts' ? 'Popular' : ''), priceStr: m(P[id].price), rrpStr: m(P[id].rrp),
+          label: on ? '✓ Added' : '+ Add', bg: on ? '#0B1F44' : '#fff', fg: on ? '#fff' : '#C8137A', border: on ? '#0B1F44' : '#E6288E',
+          toggle: () => set('a', o => ({ ...o, [id]: !o[id] })) };
+      })
+    };
+
+    const bIds = ['trivet', 'mitts', 'spoon'];
+    const bAdded = addedItems('b', st.b.inCart, '2b');
+    const pending = bIds.filter(id => st.b.sel[id] && !st.b.inCart[id]);
+    const allIn = bIds.every(id => st.b.inCart[id]);
+    const bSum = 329 + 43 + sum(bAdded);
+    const savedNum = bIds.filter(id => st.b.inCart[id]).reduce((t, id) => t + P[id].rrp - P[id].price, 0);
+    const b = {
+      items: [{ ...this.base[1], slot: '2b-grinder', priceStr: m(43), remove: () => {} }].concat(bAdded),
+      count: 2 + bAdded.length, subtotal: m(bSum), saved: savedNum ? '−' + m(savedNum) : '',
+      badge: 'Save up to ' + m(bIds.reduce((t, id) => t + P[id].rrp - P[id].price, 0)),
+      rows: bIds.map(id => ({ ...P[id], slot: '2b-rec-' + id, checked: !!(st.b.sel[id] || st.b.inCart[id]), inCart: !!st.b.inCart[id], op: st.b.inCart[id] ? .55 : 1,
+        note: st.b.inCart[id] ? '✓ In your cart' : P[id].note,
+        priceStr: m(P[id].price), rrpStr: m(P[id].rrp),
+        toggle: () => set('b', o => ({ ...o, sel: { ...o.sel, [id]: !o.sel[id] } })) })),
+      disabled: allIn || !pending.length,
+      btnBg: allIn ? '#1F9E6E' : (pending.length ? '#E6288E' : '#C9CCD4'),
+      btnLabel: allIn ? '✓ Set complete' : (pending.length ? 'Add ' + pending.length + ' to cart · ' + m(sum(pending.map(id => P[id]))) + ' · save ' + m(pending.reduce((t, id) => t + P[id].rrp - P[id].price, 0)) : 'Select items to add'),
+      add: () => set('b', o => { const ic = { ...o.inCart }; pending.forEach(id => { ic[id] = true; }); return { ...o, inCart: ic, sel: {} }; })
+    };
+
+    const cAdded = Object.keys(st.c).filter(id => st.c[id]);
+    const c = {
+      count: 2 + cAdded.length, subtotal: m(372 + sum(cAdded.map(id => P[id]))),
+      recs: ['trivet', 'mitts', 'gratin', 'spoon'].map(id => {
+        const on = !!st.c[id];
+        return { ...P[id], slot: '2c-rec-' + id, priceStr: m(P[id].price), rrpStr: m(P[id].rrp),
+          label: on ? '✓ Added' : '+ Add to cart', bg: on ? '#1F9E6E' : '#E6288E', cardBorder: on ? '#1F9E6E' : '#fff',
+          toggle: () => set('c', o => ({ ...o, [id]: !o[id] })) };
+      })
+    };
+    return { a, b, c };
+  }
+}
+</script>
+</body>
+</html>
